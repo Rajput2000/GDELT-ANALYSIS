@@ -1,0 +1,7 @@
+# ── Copy this file to terraform.tfvars and fill in your values ──
+# terraform.tfvars is gitignored — never commit real values
+
+project_id  = "your-gcp-project-id"   # <-- change this
+region      = "us-central1"
+bq_location = "US"
+environment = "dev"
