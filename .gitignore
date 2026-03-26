@@ -21,3 +21,9 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+
+#Environment variables
+.env
+
+folders
+dbt/

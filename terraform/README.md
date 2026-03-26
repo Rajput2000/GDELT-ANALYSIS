@@ -55,8 +55,8 @@ The Terraform configuration creates:
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/Rajput2000/DE-ZOOMCAMP-CAP-PROJECT.git
-cd DE-ZOOMCAMP-CAP-PROJECT
+git clone https://github.com/Rajput2000/GDELT-ANALYSIS.git
+cd GDELT-ANALYSIS
 ```
 
 ### 2. Configure Variables

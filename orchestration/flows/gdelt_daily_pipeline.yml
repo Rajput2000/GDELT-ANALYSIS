@@ -1,0 +1,155 @@
+id: gdelt_daily_pipeline
+namespace: gdelt
+
+description: |
+  Daily GDELT ingestion pipeline.
+  Runs every morning at 7AM UTC (after GDELT posts by 6AM EST).
+  Steps:
+    1. Compute target date (yesterday or backfill date)
+    2. Download GDELT export ZIP and upload raw CSV to GCS
+    3. Load CSV from GCS into BigQuery raw table
+    4. Run dbt transformations (cloned from GitHub)
+    5. Log summary
+
+labels:
+  project: gdelt-pipeline
+  env: "{{ vars.environment }}"
+
+triggers:
+  - id: daily_schedule
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 7 * * *"
+    lateMaximumDelay: PT2H
+
+# ─────────────────────────────────────────
+# Namespace variables
+# Set all of these in Kestra UI:
+#   Namespaces -> gdelt -> Variables
+# ─────────────────────────────────────────
+variables:
+  gcp_project:     "{{ vars.gcp_project }}"
+  gcs_bucket:      "{{ vars.gcs_bucket }}"
+  bq_dataset:      gdelt_raw
+  bq_table:        events
+  environment:     prod
+  github_username: "{{ vars.github_username }}"
+  github_repo:     "{{ vars.github_repo }}"
+
+tasks:
+
+  # ── 1. Compute target date ───────────────────────────────
+  - id: compute_date
+    type: io.kestra.plugin.scripts.python.Script
+    beforeCommands:
+      - pip install kestra --quiet
+    script: |
+      from datetime import date, timedelta
+      from kestra import Kestra
+
+      trigger_date = "{{ trigger.date ?? '' }}"
+      if trigger_date:
+          target = trigger_date[:10]
+      else:
+          target = str(date.today() - timedelta(days=1))
+
+      print(f"Target date: {target}")
+      Kestra.outputs({"target_date": target})
+
+  # ── 2. Download GDELT ZIP -> upload raw CSV to GCS ───────
+  - id: ingest_to_gcs
+    type: io.kestra.plugin.scripts.python.Script
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/gdelt-sa-key.json
+    beforeCommands:
+      - pip install google-cloud-storage requests kestra --quiet
+    script: |
+      import io, zipfile, requests
+      from google.cloud import storage
+      from kestra import Kestra
+
+      target_date = "{{ outputs.compute_date.vars.target_date }}"
+      bucket_name = "{{ vars.gcs_bucket }}"
+      date_nodash = target_date.replace("-", "")
+
+      zip_url  = f"http://data.gdeltproject.org/events/{date_nodash}.export.CSV.zip"
+      gcs_path = (
+          f"raw/{target_date[:4]}/{target_date[5:7]}/{target_date[8:10]}"
+          f"/{date_nodash}.export.CSV"
+      )
+
+      print(f"Downloading {zip_url} ...")
+      resp = requests.get(zip_url, timeout=120)
+      if resp.status_code == 404:
+          raise FileNotFoundError(f"GDELT file not found for {target_date}.")
+      resp.raise_for_status()
+
+      with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:
+          csv_name  = next(n for n in zf.namelist() if n.endswith(".CSV"))
+          csv_bytes = zf.read(csv_name)
+
+      print(f"Unzipped: {len(csv_bytes)/1024/1024:.1f} MB")
+
+      client = storage.Client()
+      bucket = client.bucket(bucket_name)
+      blob   = bucket.blob(gcs_path)
+      blob.upload_from_string(csv_bytes, content_type="text/csv")
+
+      gcs_uri = f"gs://{bucket_name}/{gcs_path}"
+      print(f"Uploaded: {gcs_uri}")
+      Kestra.outputs({"gcs_uri": gcs_uri, "date_nodash": date_nodash})
+
+  # ── 3. Load GCS CSV -> BigQuery ──────────────────────────
+  - id: load_to_bigquery
+    type: io.kestra.plugin.gcp.bigquery.Load
+    projectId: "{{ vars.gcp_project }}"
+    serviceAccount: "{{ secret('GCP_SA_KEY') }}"
+    destinationTable: "{{ vars.gcp_project }}.{{ vars.bq_dataset }}.{{ vars.bq_table }}"
+    from:
+      - "{{ outputs.ingest_to_gcs.vars.gcs_uri }}"
+    format: CSV
+    fieldDelimiter: "\t"
+    skipLeadingRows: 0
+    writeDisposition: WRITE_APPEND
+    allowJaggedRows: true
+    ignoreUnknownValues: true
+    timePartitioningType: DAY
+
+  # ── 4. Clone repo and run dbt ────────────────────────────
+  # Clones the latest main branch on every run so the flow
+  # always uses whatever dbt code is currently in GitHub.
+  # The SA key is written from the Kestra secret to a temp
+  # file that dbt's profiles.yml can reference via env var.
+  - id: dbt_run
+    type: io.kestra.plugin.scripts.shell.Commands
+    env:
+      DBT_GCP_PROJECT: "{{ vars.gcp_project }}"
+    beforeCommands:
+      - apt-get install -y git --quiet
+      - pip install dbt-bigquery --quiet
+      - echo '{{ secret("GCP_SA_KEY") }}' > /tmp/gdelt-sa-key.json
+    commands:
+      - git clone https://github.com/{{ vars.github_username }}/{{ vars.github_repo }}.git /tmp/gdelt-repo
+      - cd /tmp/gdelt-repo/dbt
+      - export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gdelt-sa-key.json
+      - dbt deps --profiles-dir .
+      - dbt run --select tag:gdelt --profiles-dir . --target prod
+      - dbt test --select tag:gdelt --profiles-dir . --target prod
+      - rm /tmp/gdelt-sa-key.json
+
+  # ── 5. Log summary ───────────────────────────────────────
+  - id: log_summary
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      Pipeline complete for {{ outputs.compute_date.vars.target_date }}.
+      GCS : {{ outputs.ingest_to_gcs.vars.gcs_uri }}
+      BQ  : {{ vars.gcp_project }}.{{ vars.bq_dataset }}.{{ vars.bq_table }}
+
+errors:
+  - id: notify_failure
+    type: io.kestra.plugin.core.log.Log
+    level: ERROR
+    message: |
+      GDELT pipeline FAILED.
+      Date  : {{ outputs.compute_date.vars.target_date ?? 'unknown' }}
+      Task  : {{ error.taskId }}
+      Error : {{ error.message }}
