@@ -1,0 +1,49 @@
+version: 2
+
+models:
+
+  - name: mart_daily_event_tone
+    description: >
+      Daily event metrics by quad class over the last 30 days.
+      Powers the temporal dashboard tile.
+    columns:
+      - name: event_date
+        description: Event date.
+        tests:
+          - not_null
+      - name: quad_class
+        description: "1=Verbal Coop, 2=Material Coop, 3=Verbal Conflict, 4=Material Conflict."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4]
+      - name: event_count
+        description: Number of events on this date for this quad class.
+        tests:
+          - not_null
+      - name: avg_tone
+        description: Average media tone (-100 to +100).
+      - name: conflict_pct
+        description: Percentage of events that are verbal or material conflict.
+
+  - name: mart_country_activity
+    description: >
+      Country-level event activity aggregated over the last 30 days.
+      Powers the categorical dashboard tile.
+    columns:
+      - name: action_geo_country_code
+        description: 2-char FIPS10-4 country code.
+        tests:
+          - not_null
+          - unique
+      - name: country_rank
+        description: Rank by event count descending (1 = most active country).
+        tests:
+          - not_null
+          - unique
+      - name: event_count
+        description: Total events in the country over the last 30 days.
+        tests:
+          - not_null
+      - name: conflict_pct
+        description: Percentage of events that are conflict (quad class 3 or 4).

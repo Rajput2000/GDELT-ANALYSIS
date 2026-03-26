@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_gdelt_events
+    description: >
+      Cleaned and typed GDELT 1.0 events. Integer dates cast to DATE,
+      columns renamed to snake_case, rows with null dates removed.
+    columns:
+      - name: global_event_id
+        description: Globally unique event identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: event_date
+        description: Event date cast from YYYYMMDD integer to DATE.
+        tests:
+          - not_null
+
+      - name: quad_class
+        description: "Primary event classification: 1–4."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4]
+
+      - name: goldstein_scale
+        description: Stability impact score from -10 to +10.
+
+      - name: avg_tone
+        description: Average media tone from -100 to +100.
+
+      - name: action_geo_country_code
+        description: 2-char FIPS10-4 country code for event location.
+
+      - name: event_root_code
+        description: Root-level CAMEO event category.

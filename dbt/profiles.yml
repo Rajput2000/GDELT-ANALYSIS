@@ -1,0 +1,24 @@
+gdelt_pipeline:
+  target: prod
+  outputs:
+
+    prod:
+      type:     bigquery
+      method:   service-account
+      project:  "{{ env_var('DBT_GCP_PROJECT') }}"
+      dataset:  gdelt_staging          # default dataset (overridden per model via +schema)
+      location: US
+      keyfile:  "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      threads:  4
+      timeout_seconds: 300
+      priority: interactive
+
+    dev:
+      type:     bigquery
+      method:   oauth                  # uses gcloud auth locally — no key file needed
+      project:  "{{ env_var('DBT_GCP_PROJECT') }}"
+      dataset:  gdelt_staging_dev
+      location: US
+      threads:  2
+      timeout_seconds: 300
+      priority: interactive

@@ -1,0 +1,33 @@
+name: gdelt_pipeline
+version: "1.0.0"
+config-version: 2
+
+profile: gdelt_pipeline
+
+model-paths:  ["models"]
+test-paths:   ["tests"]
+macro-paths:  ["macros"]
+
+target-path:  "target"
+clean-targets: ["target", "dbt_packages"]
+
+# ─────────────────────────────────────────
+# Model configurations by layer
+# ─────────────────────────────────────────
+models:
+  gdelt_pipeline:
+
+    staging:
+      +schema:      gdelt_staging
+      +materialized: view          # staging = views (cheap, always fresh)
+      +tags:        ["gdelt", "staging"]
+
+    mart:
+      +schema:      gdelt_mart
+      +materialized: table         # mart = tables (fast for dashboard queries)
+      +tags:        ["gdelt", "mart"]
+      +partition_by:
+        field:       event_date
+        data_type:   date
+        granularity: day
+      +cluster_by:  ["action_geo_country_code", "event_root_code", "quad_class"]

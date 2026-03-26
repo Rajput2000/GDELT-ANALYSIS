@@ -51,6 +51,7 @@ services:
         done
         wait $$SERVER_PID
     environment:
+      SECRET_GCP_SA_KEY: "${SECRET_GCP_SA_KEY}"
       KESTRA_CONFIGURATION: |
         datasources:
           postgres:

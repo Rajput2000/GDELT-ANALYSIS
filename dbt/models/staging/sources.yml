@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: gdelt_raw
+    description: "Raw GDELT 1.0 event data loaded from GCS into BigQuery."
+    database: "{{ env_var('DBT_GCP_PROJECT') }}"
+    schema: gdelt_raw
+    tables:
+      - name: events
+        description: >
+          Raw GDELT events. Partitioned by ingestion time (_PARTITIONTIME).
+          Tab-delimited source, 58 columns. Day and DATEADDED are raw YYYYMMDD integers.
+        columns:
+          - name: GlobalEventID
+            description: Globally unique event identifier.
+            tests:
+              - not_null
+          - name: Day
+            description: Event date as YYYYMMDD integer.
+            tests:
+              - not_null
+          - name: AvgTone
+            description: Average tone of coverage (-100 to +100).
+          - name: GoldsteinScale
+            description: Stability impact score (-10 to +10).
+          - name: QuadClass
+            description: "1=Verbal Coop, 2=Material Coop, 3=Verbal Conflict, 4=Material Conflict."
+          - name: ActionGeo_CountryCode
+            description: 2-char FIPS10-4 country code for where the action took place.
+          - name: EventRootCode
+            description: Root-level CAMEO event category (2-digit code).

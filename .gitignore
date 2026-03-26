@@ -25,5 +25,5 @@ override.tf.json
 #Environment variables
 .env
 
-folders
-dbt/
+# folders
+

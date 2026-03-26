@@ -11,6 +11,13 @@ description: |
     4. Run dbt transformations (cloned from GitHub)
     5. Log summary
 
+variables:
+  gcp_project: "organic-phoenix-484620-p3"
+  gcs_bucket: "organic-phoenix-484620-p3-gdelt-lake"
+  environment: "prod"
+  github_username: "Rajput2000"
+  github_repo: "GDELT-ANALYSIS"
+
 labels:
   project: gdelt-pipeline
 
@@ -25,6 +32,9 @@ tasks:
   # ── 1. Compute target date ───────────────────────────────
   - id: compute_date
     type: io.kestra.plugin.scripts.python.Script
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+      image: python:3.11-slim
     beforeCommands:
       - pip install kestra --quiet
     script: |
@@ -41,43 +51,50 @@ tasks:
       Kestra.outputs({"target_date": target})
 
   # ── 2. Clone repo, ingest GDELT → GCS → BigQuery ────────
-  # Uses the same ingest_gdelt.py script as local runs so
-  # ingestion logic lives in one place.
   - id: ingest
     type: io.kestra.plugin.scripts.shell.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+      image: python:3.11-slim
+    inputFiles:
+      sa-key.json: "{{ secret('GCP_SA_KEY') }}"
     env:
-      GCP_PROJECT: "{{ globals.gcp_project }}"
-      GCS_BUCKET: "{{ globals.gcs_bucket }}"
-      GOOGLE_APPLICATION_CREDENTIALS: /secrets/gdelt-sa-key.json
+      GCP_PROJECT: "{{ vars.gcp_project }}"
+      GCS_BUCKET: "{{ vars.gcs_bucket }}"
     beforeCommands:
+      - cp {{workingDir}}/sa-key.json /tmp/sa-key.json
+      - export GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json
       - apt-get update -qq && apt-get install -y git --quiet
       - pip install google-cloud-storage google-cloud-bigquery google-auth requests --quiet
-      - git clone https://github.com/{{ globals.github_username }}/{{ globals.github_repo }}.git /tmp/gdelt-repo
+      - git clone https://github.com/{{ vars.github_username }}/{{ vars.github_repo }}.git /tmp/gdelt-repo
     commands:
-      - python /tmp/gdelt-repo/pipeline/ingest_gdelt.py --date {{ outputs.compute_date.vars.target_date }}
+      - export GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json && python /tmp/gdelt-repo/pipeline/ingest_gdelt.py --date {{ outputs.compute_date.vars.target_date }}
 
   # ── 3. Run dbt transformations ───────────────────────────
   - id: dbt_run
     type: io.kestra.plugin.scripts.shell.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+      image: python:3.11-slim
+    inputFiles:
+      sa-key.json: "{{ secret('GCP_SA_KEY') }}"
     env:
-      DBT_GCP_PROJECT: "{{ globals.gcp_project }}"
-      GOOGLE_APPLICATION_CREDENTIALS: /secrets/gdelt-sa-key.json
+      DBT_GCP_PROJECT: "{{ vars.gcp_project }}"
     beforeCommands:
+      - cp {{workingDir}}/sa-key.json /tmp/sa-key.json
+      - export GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json
+      - apt-get update -qq && apt-get install -y git --quiet
       - pip install dbt-bigquery --quiet
+      - git clone https://github.com/{{ vars.github_username }}/{{ vars.github_repo }}.git /tmp/gdelt-repo
     commands:
-      - cd /tmp/gdelt-repo/dbt && dbt deps --profiles-dir . && dbt run --select tag:gdelt --profiles-dir . --target prod && dbt test --select tag:gdelt --profiles-dir . --target prod
+      - export GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json && cd /tmp/gdelt-repo/dbt && dbt deps --profiles-dir . && dbt run --select tag:gdelt --profiles-dir . --target prod && dbt test --select tag:gdelt --profiles-dir . --target prod
 
-  # ── 4. Cleanup & log summary ─────────────────────────────
-  - id: cleanup
-    type: io.kestra.plugin.scripts.shell.Commands
-    commands:
-      - rm -rf /tmp/gdelt-repo
-
+  # ── 4. Log summary ──────────────────────────────────────
   - id: log_summary
     type: io.kestra.plugin.core.log.Log
     message: |
       Pipeline complete for {{ outputs.compute_date.vars.target_date }}.
-      BQ: {{ globals.gcp_project }}.gdelt_raw.events
+      BQ: {{ vars.gcp_project }}.gdelt_raw.events
 
 errors:
   - id: notify_failure
