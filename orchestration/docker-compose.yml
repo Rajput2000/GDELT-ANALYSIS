@@ -31,6 +31,7 @@ services:
   kestra:
     image: kestra/kestra:latest
     pull_policy: always
+    user: "root"
     entrypoint: /bin/bash
     command:
       - "-c"

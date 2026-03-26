@@ -24,28 +24,27 @@ tasks:
 
   # ── 1. Compute target date ───────────────────────────────
   - id: compute_date
-    type: io.kestra.plugin.scripts.shell.Commands
-    taskRunner:
-      type: io.kestra.plugin.core.runner.Process
+    type: io.kestra.plugin.scripts.python.Script
     beforeCommands:
       - pip install kestra --quiet
-    commands:
-      - python3 -c "
-        from datetime import date, timedelta;
-        from kestra import Kestra;
-        trigger_date = '{{ trigger.date ?? \"\" }}';
-        target = trigger_date[:10] if trigger_date else str(date.today() - timedelta(days=1));
-        print(f'Target date: {target}');
-        Kestra.outputs({'target_date': target})
-        "
+    script: |
+      from datetime import date, timedelta
+      from kestra import Kestra
+
+      trigger_date = "{{ trigger.date ?? '' }}"
+      if trigger_date:
+          target = trigger_date[:10]
+      else:
+          target = str(date.today() - timedelta(days=1))
+
+      print(f"Target date: {target}")
+      Kestra.outputs({"target_date": target})
 
   # ── 2. Clone repo, ingest GDELT → GCS → BigQuery ────────
   # Uses the same ingest_gdelt.py script as local runs so
   # ingestion logic lives in one place.
   - id: ingest
     type: io.kestra.plugin.scripts.shell.Commands
-    taskRunner:
-      type: io.kestra.plugin.core.runner.Process
     env:
       GCP_PROJECT: "{{ globals.gcp_project }}"
       GCS_BUCKET: "{{ globals.gcs_bucket }}"
@@ -60,8 +59,6 @@ tasks:
   # ── 3. Run dbt transformations ───────────────────────────
   - id: dbt_run
     type: io.kestra.plugin.scripts.shell.Commands
-    taskRunner:
-      type: io.kestra.plugin.core.runner.Process
     env:
       DBT_GCP_PROJECT: "{{ globals.gcp_project }}"
       GOOGLE_APPLICATION_CREDENTIALS: /secrets/gdelt-sa-key.json
@@ -73,8 +70,6 @@ tasks:
   # ── 4. Cleanup & log summary ─────────────────────────────
   - id: cleanup
     type: io.kestra.plugin.scripts.shell.Commands
-    taskRunner:
-      type: io.kestra.plugin.core.runner.Process
     commands:
       - rm -rf /tmp/gdelt-repo
 
