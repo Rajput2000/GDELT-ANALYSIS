@@ -23,8 +23,8 @@ This project solves that by building a fully automated pipeline that turns the r
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Kestra Cloud                             │
-│                  (daily schedule — 7AM UTC)                     │
+│                       Local Kestra                              │
+│         (Docker Compose — daily schedule at 7AM UTC)            │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
                     ┌───────▼────────┐
@@ -51,7 +51,7 @@ This project solves that by building a fully automated pipeline that turns the r
                             │            │
                     ┌───────▼────────────▼───┐
                     │     Looker Studio      │  ← Dashboard
-                    │  (2 tiles, live BQ)    │
+                    │      (live BQ)         │
                     └────────────────────────┘
 ```
 
@@ -63,7 +63,7 @@ This project solves that by building a fully automated pipeline that turns the r
 |---|---|---|
 | Infrastructure as Code | [Terraform](https://www.terraform.io/) | Provision GCS bucket, BigQuery datasets, service account + IAM |
 | Cloud | [GCP](https://cloud.google.com/) | GCS (data lake), BigQuery (data warehouse) |
-| Orchestration | [Kestra Cloud](https://kestra.io/) | Daily scheduled pipeline — download → GCS → BigQuery → dbt |
+| Orchestration | [Kestra](https://kestra.io/) (Docker Compose) | Daily scheduled pipeline — download → GCS → BigQuery → dbt |
 | Data Lake | [Google Cloud Storage](https://cloud.google.com/storage) | Raw GDELT CSV files, date-partitioned |
 | Data Warehouse | [BigQuery](https://cloud.google.com/bigquery) | Ingestion-time partitioned, clustered by country + event type |
 | Transformations | [dbt](https://www.getdbt.com/) | Staging views + mart tables with tests |
@@ -75,13 +75,13 @@ This project solves that by building a fully automated pipeline that turns the r
 
 The dashboard answers two questions visually:
 
-**Tile 1 — Global Event Tone Over Time** *(temporal)*
+**Global Event Tone Over Time** *(temporal)*
 Daily average media tone and event volume over the last 30 days, broken down by quad class (Verbal Cooperation, Material Cooperation, Verbal Conflict, Material Conflict). Reveals whether global news is trending more positive or negative.
 
-**Tile 2 — Top Countries by Event Activity** *(categorical)*
+**Top Countries by Event Activity** *(categorical)*
 Bar chart of the most active countries in global news over the last 30 days, coloured by average tone. Reveals which countries are dominating coverage and whether that coverage is positive or negative.
 
-> 🔗 **[View the live dashboard](#)** ← replace with your Looker Studio link
+> 🔗 **[View the live dashboard](https://lookerstudio.google.com/reporting/1ed1c608-2d93-4040-806d-867be4332501)**
 
 ---
 
@@ -150,15 +150,15 @@ gdelt-pipeline/
 - [Terraform](https://developer.hashicorp.com/terraform/install) >= 1.3
 - [dbt-bigquery](https://docs.getdbt.com/docs/core/pip-install) (`pip install dbt-bigquery`)
 - Python 3.10+
-- [Kestra Cloud](https://app.kestra.io) free account
+- [Docker](https://docs.docker.com/engine/install/) & Docker Compose (for local orchestration)
 
 ---
 
 ### Step 1 — Clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/gdelt-pipeline.git
-cd gdelt-pipeline
+git clone https://github.com/Rajput2000/GDELT-ANALYSIS.git
+cd GDELT-ANALYSIS
 ```
 
 ---
@@ -213,21 +213,31 @@ dbt test --select tag:gdelt
 
 ---
 
-### Step 5 — Set up Kestra Cloud (daily automation)
+### Step 5 — Set up Local Orchestration with Kestra
 
-1. Sign up at [app.kestra.io](https://app.kestra.io) and create namespace `gdelt`
-2. Add namespace **Variables** (Namespaces → gdelt → Variables):
-   ```yaml
-   gcp_project: "<your-project-id>"
-   gcs_bucket:  "<your-project-id>-gdelt-lake"
-   environment: "prod"
+1. Navigate to the orchestration directory:
+   ```bash
+   cd orchestration
    ```
-3. Add namespace **Secret** (Namespaces → gdelt → Secrets):
-   - Key: `GCP_SA_KEY`
-   - Value: contents of `keys/gdelt-pipeline-sa.json`
-4. Import the flow: Flows → Import → select `orchestration/flows/gdelt_daily_pipeline.yml`
+2. Create your `.env` file from the service account key (this feeds Kestra secrets):
+   ```bash
+   echo "SECRET_GCP_SA_KEY=$(cat ../keys/gdelt-pipeline-sa.json | base64)" > .env
+   # Or directly set it if you prefer plain text interpolation depends on Kestra version config.
+   # Standard approach provided in `docker-compose.yml`:
+   export SECRET_GCP_SA_KEY=$(cat ../keys/gdelt-pipeline-sa.json)
+   ```
+3. Start the Kestra server:
+   ```bash
+   docker compose up -d
+   ```
+   *Note: On startup, Kestra will automatically connect via API and import the flow from `flows/gdelt_daily_pipeline.yml`.*
 
-The pipeline will now run automatically every day at 7AM UTC.
+4. Access the UI to monitor the daily runs (or trigger one manually):
+   - **URL**: [http://localhost:8080](http://localhost:8080)
+   - **Username**: `admin@kestra.io`
+   - **Password**: `Kestra2024`
+
+The pipeline will now run automatically every day at 7AM UTC as long as the Docker container is running.
 
 ---
 
@@ -265,16 +275,4 @@ The pipeline will now run automatically every day at 7AM UTC.
 | Staging | View | `gdelt_staging` | Cast types, rename columns, filter nulls |
 | Mart | Table | `gdelt_mart` | Aggregated, dashboard-ready |
 
----
 
-## Evaluation Criteria Checklist
-
-| Criterion | Implementation | Points |
-|---|---|---|
-| Problem description | Described above — clear problem, clear solution | 4 |
-| Cloud | GCP (GCS + BigQuery) + Terraform IaC | 4 |
-| Data ingestion (batch) | End-to-end Kestra DAG: download → GCS → BigQuery | 4 |
-| Data warehouse | BigQuery, partitioned + clustered with explanation | 4 |
-| Transformations | dbt staging + mart models with tests | 4 |
-| Dashboard | Looker Studio, 2 tiles (temporal + categorical) | 4 |
-| Reproducibility | Step-by-step instructions above | 4 |
