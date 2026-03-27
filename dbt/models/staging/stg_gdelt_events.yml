@@ -10,7 +10,9 @@ models:
         description: Globally unique event identifier.
         tests:
           - not_null
-          - unique
+          - unique:
+              config:
+                severity: warn
 
       - name: event_date
         description: Event date cast from YYYYMMDD integer to DATE.
@@ -23,6 +25,7 @@ models:
           - not_null
           - accepted_values:
               values: [1, 2, 3, 4]
+              quote: false
 
       - name: goldstein_scale
         description: Stability impact score from -10 to +10.

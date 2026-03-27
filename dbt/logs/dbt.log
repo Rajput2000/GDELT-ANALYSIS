@@ -1,0 +1,2491 @@
+[0m10:08:22.361415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ee40e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1138becc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1138be9f0>]}
+
+
+============================== 10:08:22.416358 | 8b07a5d6-e1e0-4391-966f-c8eb305e38d0 ==============================
+[0m10:08:22.416358 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:08:22.417367 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps --profiles-dir .', 'log_cache_events': 'False', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'use_colors': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'debug': 'False', 'quiet': 'False', 'write_json': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'target_path': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'printer_width': '80', 'profiles_dir': '.', 'log_format': 'default', 'version_check': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'introspect': 'True'}
+[0m10:08:22.633568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8b07a5d6-e1e0-4391-966f-c8eb305e38d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10faee480>]}
+[0m10:08:22.738934 [debug] [MainThread]: Set downloads directory='/var/folders/40/bk_4d0x9689632w91t19z4bw0000gn/T/dbt-downloads-cnkuewfq'
+[0m10:08:22.740227 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:08:23.131847 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:08:23.137855 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:08:23.408273 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:08:23.438730 [info ] [MainThread]: Updating lock file in file path: /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/package-lock.yml
+[0m10:08:23.443039 [debug] [MainThread]: Set downloads directory='/var/folders/40/bk_4d0x9689632w91t19z4bw0000gn/T/dbt-downloads-coykbu7d'
+[0m10:08:23.448953 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:08:25.039767 [info ] [MainThread]: Installed from version 1.3.3
+[0m10:08:25.040618 [info ] [MainThread]: Up to date!
+[0m10:08:25.041287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '8b07a5d6-e1e0-4391-966f-c8eb305e38d0', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113a4c920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113a4d520>]}
+[0m10:08:25.042887 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.815652, "process_in_blocks": "0", "process_kernel_time": 1.198294, "process_mem_max_rss": "130875392", "process_out_blocks": "0", "process_user_time": 4.069238}
+[0m10:08:25.043637 [debug] [MainThread]: Command `dbt deps` succeeded at 10:08:25.043478 after 2.82 seconds
+[0m10:08:25.044111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113598bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10faee480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11392b4a0>]}
+[0m10:08:25.044552 [debug] [MainThread]: Flushing usage events
+[0m10:08:26.265819 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:08:46.715391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9df500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c55d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c55d280>]}
+
+
+============================== 10:08:46.722789 | 74189e0c-61a8-4bd8-acc2-848943c8cecc ==============================
+[0m10:08:46.722789 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:08:46.723851 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'fail_fast': 'False', 'target_path': 'None', 'static_parser': 'True', 'warn_error': 'None', 'printer_width': '80', 'invocation_command': 'dbt run --select tag:gdelt --profiles-dir . --target prod', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'debug': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'version_check': 'True', 'partial_parse': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'profiles_dir': '.', 'cache_selected_only': 'False', 'use_colors': 'True'}
+[0m10:09:39.858857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9770e0>]}
+[0m10:09:39.948242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11501a390>]}
+[0m10:09:39.949192 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:09:40.256623 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:09:40.257922 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:09:40.258528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1196481d0>]}
+[0m10:09:42.392878 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_gdelt_events' in package 'gdelt_pipeline'
+(models/staging/stg_gdelt_events.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m10:09:42.393606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119cc50d0>]}
+[0m10:09:42.848413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a0af620>]}
+[0m10:09:42.976435 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:09:42.979435 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:09:43.036281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119e83f80>]}
+[0m10:09:43.037339 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 654 macros
+[0m10:09:43.038537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc374d0>]}
+[0m10:09:43.041219 [info ] [MainThread]: 
+[0m10:09:43.042095 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:09:43.042642 [info ] [MainThread]: 
+[0m10:09:43.043594 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:09:43.052140 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:09:43.053015 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:09:43.053828 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:09:43.054561 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:09:44.787529 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now create_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart)
+[0m10:09:44.788553 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now create_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging)
+[0m10:09:44.790094 [debug] [ThreadPool]: Creating schema "database: "organic-phoenix-484620-p3"
+schema: "gdelt_staging_gdelt_mart"
+"
+[0m10:09:44.791294 [debug] [ThreadPool]: Creating schema "database: "organic-phoenix-484620-p3"
+schema: "gdelt_staging_gdelt_staging"
+"
+[0m10:09:44.825285 [debug] [ThreadPool]: On create_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "connection_name": "create_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart"} */
+create schema if not exists `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`
+  
+[0m10:09:44.829485 [debug] [ThreadPool]: On create_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "connection_name": "create_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging"} */
+create schema if not exists `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`
+  
+[0m10:09:44.830107 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:09:44.830629 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:09:46.127345 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:c378ca17-6540-43f7-9ab8-c90ae543f33c&page=queryresults
+[0m10:09:46.167168 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:2a72c2c8-cb85-4d3b-adbf-411518937313&page=queryresults
+[0m10:09:47.127562 [debug] [ThreadPool]: SQL status: OK in 0.960 seconds
+[0m10:09:47.138536 [debug] [ThreadPool]: SQL status: OK in 1.011 seconds
+[0m10:09:47.271305 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging, now list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart)
+[0m10:09:47.272086 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart, now list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging)
+[0m10:09:47.272699 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:09:47.273496 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:09:48.351278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119e3d580>]}
+[0m10:09:48.352327 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:09:48.364524 [debug] [Thread-1 (]: Began running node model.gdelt_pipeline.stg_gdelt_events
+[0m10:09:48.365646 [info ] [Thread-1 (]: 1 of 3 START sql view model gdelt_staging_gdelt_staging.stg_gdelt_events ....... [RUN]
+[0m10:09:48.366580 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart, now model.gdelt_pipeline.stg_gdelt_events)
+[0m10:09:48.367294 [debug] [Thread-1 (]: Began compiling node model.gdelt_pipeline.stg_gdelt_events
+[0m10:09:48.383345 [debug] [Thread-1 (]: Writing injected SQL for node "model.gdelt_pipeline.stg_gdelt_events"
+[0m10:09:48.384933 [debug] [Thread-1 (]: Began executing node model.gdelt_pipeline.stg_gdelt_events
+[0m10:09:48.419708 [debug] [Thread-1 (]: Writing runtime sql for node "model.gdelt_pipeline.stg_gdelt_events"
+[0m10:09:48.421316 [debug] [Thread-1 (]: On model.gdelt_pipeline.stg_gdelt_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.stg_gdelt_events"} */
+
+
+  create or replace view `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+  OPTIONS()
+  as 
+
+with raw as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_raw`.`events`
+
+),
+
+cleaned as (
+
+    select
+        -- ── Identifiers ──────────────────────────────────────────
+        GlobalEventID                                           as global_event_id,
+
+        -- ── Dates — cast from YYYYMMDD integer to DATE ──────────
+        parse_date('%Y%m%d', cast(Day as string))               as event_date,
+        parse_date('%Y%m%d', cast(DATEADDED as string))         as date_added,
+        Year                                                    as event_year,
+        MonthYear                                               as event_month_year,
+
+        -- ── Actor 1 ───────────────────────────────────────────
+        Actor1Code                                              as actor1_code,
+        Actor1Name                                              as actor1_name,
+        Actor1CountryCode                                       as actor1_country_code,
+        Actor1Type1Code                                         as actor1_type1_code,
+        Actor1KnownGroupCode                                    as actor1_known_group_code,
+
+        -- ── Actor 2 ───────────────────────────────────────────
+        Actor2Code                                              as actor2_code,
+        Actor2Name                                              as actor2_name,
+        Actor2CountryCode                                       as actor2_country_code,
+        Actor2Type1Code                                         as actor2_type1_code,
+        Actor2KnownGroupCode                                    as actor2_known_group_code,
+
+        -- ── Event action ──────────────────────────────────────
+        IsRootEvent                                             as is_root_event,
+        EventCode                                               as event_code,
+        EventBaseCode                                           as event_base_code,
+        EventRootCode                                           as event_root_code,
+
+        -- QuadClass labels for readability
+        QuadClass                                               as quad_class,
+        case QuadClass
+            when 1 then 'Verbal Cooperation'
+            when 2 then 'Material Cooperation'
+            when 3 then 'Verbal Conflict'
+            when 4 then 'Material Conflict'
+            else        'Unknown'
+        end                                                     as quad_class_label,
+
+        -- ── Scores ────────────────────────────────────────────
+        GoldsteinScale                                          as goldstein_scale,
+        AvgTone                                                 as avg_tone,
+        NumMentions                                             as num_mentions,
+        NumSources                                              as num_sources,
+        NumArticles                                             as num_articles,
+
+        -- ── Action geography (best field for mapping events) ──
+        ActionGeo_Type                                          as action_geo_type,
+        ActionGeo_Fullname                                      as action_geo_fullname,
+        ActionGeo_CountryCode                                   as action_geo_country_code,
+        ActionGeo_ADM1Code                                      as action_geo_adm1_code,
+        ActionGeo_Lat                                           as action_geo_lat,
+        ActionGeo_Long                                          as action_geo_long,
+        ActionGeo_FeatureID                                     as action_geo_feature_id,
+
+        -- ── Actor 1 geography ─────────────────────────────────
+        Actor1Geo_CountryCode                                   as actor1_geo_country_code,
+        Actor1Geo_Fullname                                      as actor1_geo_fullname,
+        Actor1Geo_Lat                                           as actor1_geo_lat,
+        Actor1Geo_Long                                          as actor1_geo_long,
+
+        -- ── Actor 2 geography ─────────────────────────────────
+        Actor2Geo_CountryCode                                   as actor2_geo_country_code,
+        Actor2Geo_Fullname                                      as actor2_geo_fullname,
+        Actor2Geo_Lat                                           as actor2_geo_lat,
+        Actor2Geo_Long                                          as actor2_geo_long,
+
+        -- ── Source ────────────────────────────────────────────
+        SOURCEURL                                               as source_url
+
+    from raw
+
+    where
+        -- Drop rows with no usable date
+        Day is not null
+        -- Drop rows with invalid date format (sanity check)
+        and cast(Day as string) like '20%'
+
+)
+
+select * from cleaned;
+
+
+[0m10:09:48.422292 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:09:49.973900 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:1578b76d-1d90-4583-81b0-943c26bd7731&page=queryresults
+[0m10:09:50.731453 [debug] [Thread-1 (]: SQL status: OK in 0.756 seconds
+[0m10:09:50.765582 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119ed3860>]}
+[0m10:09:50.766462 [info ] [Thread-1 (]: 1 of 3 OK created sql view model gdelt_staging_gdelt_staging.stg_gdelt_events .. [[32mCREATE VIEW (0 processed)[0m in 2.40s]
+[0m10:09:50.767376 [debug] [Thread-1 (]: Finished running node model.gdelt_pipeline.stg_gdelt_events
+[0m10:09:50.768468 [debug] [Thread-3 (]: Began running node model.gdelt_pipeline.mart_country_activity
+[0m10:09:50.769234 [debug] [Thread-4 (]: Began running node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:09:50.770135 [info ] [Thread-3 (]: 2 of 3 START sql table model gdelt_staging_gdelt_mart.mart_country_activity .... [RUN]
+[0m10:09:50.770931 [info ] [Thread-4 (]: 3 of 3 START sql table model gdelt_staging_gdelt_mart.mart_daily_event_tone .... [RUN]
+[0m10:09:50.771919 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.gdelt_pipeline.mart_country_activity'
+[0m10:09:50.772874 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.gdelt_pipeline.mart_daily_event_tone'
+[0m10:09:50.773626 [debug] [Thread-3 (]: Began compiling node model.gdelt_pipeline.mart_country_activity
+[0m10:09:50.774196 [debug] [Thread-4 (]: Began compiling node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:09:50.786525 [debug] [Thread-3 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:09:50.792481 [debug] [Thread-4 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_daily_event_tone"
+[0m10:09:50.794777 [debug] [Thread-4 (]: Began executing node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:09:50.817473 [debug] [Thread-3 (]: Began executing node model.gdelt_pipeline.mart_country_activity
+[0m10:09:50.891163 [debug] [Thread-3 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:09:50.893484 [debug] [Thread-4 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_daily_event_tone"
+[0m10:09:50.895010 [debug] [Thread-4 (]: On model.gdelt_pipeline.mart_daily_event_tone: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_daily_event_tone"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+      
+    partition by event_date
+    cluster by quad_class_label
+
+    
+    OPTIONS()
+    as (
+      
+
+/*
+  Dashboard tile: "Global Event Tone Over Time"
+  - X axis: event_date (last 30 days)
+  - Y axis: avg_tone (line) + event_count (bar)
+  - Series: quad_class_label (Verbal Coop / Material Coop / Verbal Conflict / Material Conflict)
+*/
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+
+),
+
+aggregated as (
+
+    select
+        event_date,
+        quad_class,
+        quad_class_label,
+
+        -- Volume metrics
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+
+        -- Sentiment / stability metrics
+        round(avg(avg_tone),         3)                     as avg_tone,
+        round(avg(goldstein_scale),  3)                     as avg_goldstein,
+
+        -- Importance-weighted tone (weighted by number of articles)
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+
+        -- Conflict share (% of events that are verbal or material conflict)
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct
+
+    from base
+    group by 1, 2, 3
+
+)
+
+select * from aggregated
+order by event_date, quad_class
+    );
+  
+[0m10:09:50.895751 [debug] [Thread-3 (]: On model.gdelt_pipeline.mart_country_activity: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_country_activity"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+      
+    partition by event_date
+    cluster by action_geo_country_code
+
+    
+    OPTIONS()
+    as (
+      
+
+/*
+  Dashboard tile: "Top Countries by Event Activity"
+  - X axis: country (top N by event count)
+  - Y axis: event_count (bar), avg_tone (colour scale)
+  - Filter: exclude blank country codes
+*/
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+        -- Only include events with a resolved country
+        and action_geo_country_code is not null
+        and action_geo_country_code != ''
+
+),
+
+by_country as (
+
+    select
+        action_geo_country_code,
+
+        -- Best readable name: most frequent fullname for this country code
+        -- (handles spelling variants — we take the mode)
+        approx_top_count(action_geo_fullname, 1)[offset(0)].value
+                                                            as country_name_common,
+
+        -- Volume
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+
+        -- Sentiment
+        round(avg(avg_tone),        3)                      as avg_tone,
+        round(avg(goldstein_scale), 3)                      as avg_goldstein,
+
+        -- Importance-weighted tone
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+
+        -- Conflict breakdown
+        countif(quad_class = 1)                             as verbal_coop_count,
+        countif(quad_class = 2)                             as material_coop_count,
+        countif(quad_class = 3)                             as verbal_conflict_count,
+        countif(quad_class = 4)                             as material_conflict_count,
+
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct,
+
+        -- Date range covered
+        min(event_date)                                     as first_event_date,
+        max(event_date)                                     as last_event_date
+
+    from base
+    group by 1
+
+),
+
+ranked as (
+
+    select
+        *,
+        row_number() over (order by event_count desc)       as country_rank
+    from by_country
+
+)
+
+select * from ranked
+order by country_rank
+    );
+  
+[0m10:09:50.896495 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:09:50.897097 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:09:52.351458 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:142ffc7f-62d5-4e75-9f43-ec960e37d820&page=queryresults
+[0m10:09:52.488451 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ef777c3a-9ce1-4e4d-be05-c776a289e367&page=queryresults
+[0m10:09:52.963963 [error] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:142ffc7f-62d5-4e75-9f43-ec960e37d820&page=queryresults
+[0m10:09:52.997826 [debug] [Thread-4 (]: Database Error in model mart_daily_event_tone (models/mart/mart_daily_event_tone.sql)
+  Result of ORDER BY queries cannot be partitioned by field 'event_date'
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_daily_event_tone.sql
+[0m10:09:52.998686 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d2455b0>]}
+[0m10:09:53.000924 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model gdelt_staging_gdelt_mart.mart_daily_event_tone  [[31mERROR[0m in 2.23s]
+[0m10:09:53.003095 [debug] [Thread-4 (]: Finished running node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:09:53.004214 [debug] [Thread-7 (]: Marking all children of 'model.gdelt_pipeline.mart_daily_event_tone' to be skipped because of status 'error'.  Reason: Database Error in model mart_daily_event_tone (models/mart/mart_daily_event_tone.sql)
+  Result of ORDER BY queries cannot be partitioned by field 'event_date'
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_daily_event_tone.sql.
+[0m10:09:53.103227 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ef777c3a-9ce1-4e4d-be05-c776a289e367&page=queryresults
+[0m10:09:53.116444 [debug] [Thread-3 (]: Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Unrecognized name: event_date at [8:18]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:09:53.117629 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74189e0c-61a8-4bd8-acc2-848943c8cecc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d246de0>]}
+[0m10:09:53.118867 [error] [Thread-3 (]: 2 of 3 ERROR creating sql table model gdelt_staging_gdelt_mart.mart_country_activity  [[31mERROR[0m in 2.35s]
+[0m10:09:53.120089 [debug] [Thread-3 (]: Finished running node model.gdelt_pipeline.mart_country_activity
+[0m10:09:53.121223 [debug] [Thread-7 (]: Marking all children of 'model.gdelt_pipeline.mart_country_activity' to be skipped because of status 'error'.  Reason: Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Unrecognized name: event_date at [8:18]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql.
+[0m10:09:53.123660 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:09:53.127076 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:09:53.128633 [debug] [MainThread]: Connection 'model.gdelt_pipeline.stg_gdelt_events' was properly closed.
+[0m10:09:53.129552 [debug] [MainThread]: Connection 'list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging' was properly closed.
+[0m10:09:53.130233 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_country_activity' was properly closed.
+[0m10:09:53.130734 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_daily_event_tone' was properly closed.
+[0m10:09:53.131363 [info ] [MainThread]: 
+[0m10:09:53.131920 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 10.09 seconds (10.09s).
+[0m10:09:53.133329 [debug] [MainThread]: Command end result
+[0m10:09:53.178352 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:09:53.181544 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:09:53.189429 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:09:53.189943 [info ] [MainThread]: 
+[0m10:09:53.190696 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m10:09:53.191775 [info ] [MainThread]: 
+[0m10:09:53.192773 [error] [MainThread]: [31mFailure in model mart_daily_event_tone (models/mart/mart_daily_event_tone.sql)[0m
+[0m10:09:53.193544 [error] [MainThread]:   Database Error in model mart_daily_event_tone (models/mart/mart_daily_event_tone.sql)
+  Result of ORDER BY queries cannot be partitioned by field 'event_date'
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_daily_event_tone.sql
+[0m10:09:53.194417 [info ] [MainThread]: 
+[0m10:09:53.195109 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/mart/mart_daily_event_tone.sql
+[0m10:09:53.195785 [info ] [MainThread]: 
+[0m10:09:53.197013 [error] [MainThread]: [31mFailure in model mart_country_activity (models/mart/mart_country_activity.sql)[0m
+[0m10:09:53.197977 [error] [MainThread]:   Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Unrecognized name: event_date at [8:18]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:09:53.198633 [info ] [MainThread]: 
+[0m10:09:53.199409 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:09:53.200258 [info ] [MainThread]: 
+[0m10:09:53.202475 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:09:53.204574 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:09:53.206406 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 66.59273, "process_in_blocks": "0", "process_kernel_time": 1.688944, "process_mem_max_rss": "232378368", "process_out_blocks": "0", "process_user_time": 9.156564}
+[0m10:09:53.208198 [debug] [MainThread]: Command `dbt run` failed at 10:09:53.207887 after 66.59 seconds
+[0m10:09:53.241491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d18c500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1184ef860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a0b5250>]}
+[0m10:09:53.256127 [debug] [MainThread]: Flushing usage events
+[0m10:09:54.752295 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:11:04.588004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110957e30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109814c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110981430>]}
+
+
+============================== 10:11:04.594949 | 9d8989b3-e6a0-4944-b93c-90d105d18041 ==============================
+[0m10:11:04.594949 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:11:04.595818 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'fail_fast': 'False', 'debug': 'False', 'target_path': 'None', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'printer_width': '80', 'cache_selected_only': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'static_parser': 'True', 'profiles_dir': '.', 'empty': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run --select tag:gdelt --profiles-dir . --target prod', 'use_colors': 'True', 'log_format': 'default', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None'}
+[0m10:11:06.420438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ed7f0e0>]}
+[0m10:11:06.498690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d70b380>]}
+[0m10:11:06.499511 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:11:06.755791 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:11:06.893220 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:11:06.893899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de75a60>]}
+[0m10:11:08.702450 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_gdelt_events' in package 'gdelt_pipeline'
+(models/staging/stg_gdelt_events.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m10:11:08.703198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dcc8950>]}
+[0m10:11:09.013841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e15c9e0>]}
+[0m10:11:09.124521 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:11:09.127096 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:11:09.158725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11da40ce0>]}
+[0m10:11:09.159277 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 654 macros
+[0m10:11:09.159742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e0f0500>]}
+[0m10:11:09.161751 [info ] [MainThread]: 
+[0m10:11:09.162260 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:11:09.162686 [info ] [MainThread]: 
+[0m10:11:09.163313 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:11:09.168652 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:11:09.169581 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:11:09.170155 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:11:09.170863 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:11:10.679796 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart)
+[0m10:11:10.681056 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging)
+[0m10:11:10.683380 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:11:10.684472 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:11:11.845727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dce60f0>]}
+[0m10:11:11.846462 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:11:11.852084 [debug] [Thread-1 (]: Began running node model.gdelt_pipeline.stg_gdelt_events
+[0m10:11:11.852808 [info ] [Thread-1 (]: 1 of 3 START sql view model gdelt_staging_gdelt_staging.stg_gdelt_events ....... [RUN]
+[0m10:11:11.853471 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart, now model.gdelt_pipeline.stg_gdelt_events)
+[0m10:11:11.853962 [debug] [Thread-1 (]: Began compiling node model.gdelt_pipeline.stg_gdelt_events
+[0m10:11:11.864855 [debug] [Thread-1 (]: Writing injected SQL for node "model.gdelt_pipeline.stg_gdelt_events"
+[0m10:11:11.867190 [debug] [Thread-1 (]: Began executing node model.gdelt_pipeline.stg_gdelt_events
+[0m10:11:11.908778 [debug] [Thread-1 (]: Writing runtime sql for node "model.gdelt_pipeline.stg_gdelt_events"
+[0m10:11:11.910286 [debug] [Thread-1 (]: On model.gdelt_pipeline.stg_gdelt_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.stg_gdelt_events"} */
+
+
+  create or replace view `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+  OPTIONS()
+  as 
+
+with raw as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_raw`.`events`
+
+),
+
+cleaned as (
+
+    select
+        -- ── Identifiers ──────────────────────────────────────────
+        GlobalEventID                                           as global_event_id,
+
+        -- ── Dates — cast from YYYYMMDD integer to DATE ──────────
+        parse_date('%Y%m%d', cast(Day as string))               as event_date,
+        parse_date('%Y%m%d', cast(DATEADDED as string))         as date_added,
+        Year                                                    as event_year,
+        MonthYear                                               as event_month_year,
+
+        -- ── Actor 1 ───────────────────────────────────────────
+        Actor1Code                                              as actor1_code,
+        Actor1Name                                              as actor1_name,
+        Actor1CountryCode                                       as actor1_country_code,
+        Actor1Type1Code                                         as actor1_type1_code,
+        Actor1KnownGroupCode                                    as actor1_known_group_code,
+
+        -- ── Actor 2 ───────────────────────────────────────────
+        Actor2Code                                              as actor2_code,
+        Actor2Name                                              as actor2_name,
+        Actor2CountryCode                                       as actor2_country_code,
+        Actor2Type1Code                                         as actor2_type1_code,
+        Actor2KnownGroupCode                                    as actor2_known_group_code,
+
+        -- ── Event action ──────────────────────────────────────
+        IsRootEvent                                             as is_root_event,
+        EventCode                                               as event_code,
+        EventBaseCode                                           as event_base_code,
+        EventRootCode                                           as event_root_code,
+
+        -- QuadClass labels for readability
+        QuadClass                                               as quad_class,
+        case QuadClass
+            when 1 then 'Verbal Cooperation'
+            when 2 then 'Material Cooperation'
+            when 3 then 'Verbal Conflict'
+            when 4 then 'Material Conflict'
+            else        'Unknown'
+        end                                                     as quad_class_label,
+
+        -- ── Scores ────────────────────────────────────────────
+        GoldsteinScale                                          as goldstein_scale,
+        AvgTone                                                 as avg_tone,
+        NumMentions                                             as num_mentions,
+        NumSources                                              as num_sources,
+        NumArticles                                             as num_articles,
+
+        -- ── Action geography (best field for mapping events) ──
+        ActionGeo_Type                                          as action_geo_type,
+        ActionGeo_Fullname                                      as action_geo_fullname,
+        ActionGeo_CountryCode                                   as action_geo_country_code,
+        ActionGeo_ADM1Code                                      as action_geo_adm1_code,
+        ActionGeo_Lat                                           as action_geo_lat,
+        ActionGeo_Long                                          as action_geo_long,
+        ActionGeo_FeatureID                                     as action_geo_feature_id,
+
+        -- ── Actor 1 geography ─────────────────────────────────
+        Actor1Geo_CountryCode                                   as actor1_geo_country_code,
+        Actor1Geo_Fullname                                      as actor1_geo_fullname,
+        Actor1Geo_Lat                                           as actor1_geo_lat,
+        Actor1Geo_Long                                          as actor1_geo_long,
+
+        -- ── Actor 2 geography ─────────────────────────────────
+        Actor2Geo_CountryCode                                   as actor2_geo_country_code,
+        Actor2Geo_Fullname                                      as actor2_geo_fullname,
+        Actor2Geo_Lat                                           as actor2_geo_lat,
+        Actor2Geo_Long                                          as actor2_geo_long,
+
+        -- ── Source ────────────────────────────────────────────
+        SOURCEURL                                               as source_url
+
+    from raw
+
+    where
+        -- Drop rows with no usable date
+        Day is not null
+        -- Drop rows with invalid date format (sanity check)
+        and cast(Day as string) like '20%'
+
+)
+
+select * from cleaned;
+
+
+[0m10:11:11.911103 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:11:13.229663 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:61fcc353-6ed0-44a1-9c4f-4b21304b06a2&page=queryresults
+[0m10:11:14.031390 [debug] [Thread-1 (]: SQL status: OK in 0.800 seconds
+[0m10:11:14.127356 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d90ecf0>]}
+[0m10:11:14.128208 [info ] [Thread-1 (]: 1 of 3 OK created sql view model gdelt_staging_gdelt_staging.stg_gdelt_events .. [[32mCREATE VIEW (0 processed)[0m in 2.27s]
+[0m10:11:14.128997 [debug] [Thread-1 (]: Finished running node model.gdelt_pipeline.stg_gdelt_events
+[0m10:11:14.130333 [debug] [Thread-3 (]: Began running node model.gdelt_pipeline.mart_country_activity
+[0m10:11:14.131148 [info ] [Thread-3 (]: 2 of 3 START sql table model gdelt_staging_gdelt_mart.mart_country_activity .... [RUN]
+[0m10:11:14.131980 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.gdelt_pipeline.mart_country_activity'
+[0m10:11:14.132410 [debug] [Thread-3 (]: Began compiling node model.gdelt_pipeline.mart_country_activity
+[0m10:11:14.136858 [debug] [Thread-3 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:11:14.137552 [debug] [Thread-4 (]: Began running node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:11:14.138493 [info ] [Thread-4 (]: 3 of 3 START sql table model gdelt_staging_gdelt_mart.mart_daily_event_tone .... [RUN]
+[0m10:11:14.139283 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.gdelt_pipeline.mart_daily_event_tone'
+[0m10:11:14.139800 [debug] [Thread-4 (]: Began compiling node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:11:14.146997 [debug] [Thread-4 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_daily_event_tone"
+[0m10:11:14.147723 [debug] [Thread-3 (]: Began executing node model.gdelt_pipeline.mart_country_activity
+[0m10:11:14.171964 [debug] [Thread-4 (]: Began executing node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:11:14.201523 [debug] [Thread-3 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:11:14.204058 [debug] [Thread-4 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_daily_event_tone"
+[0m10:11:14.205387 [debug] [Thread-3 (]: On model.gdelt_pipeline.mart_country_activity: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_country_activity"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+      
+    
+    cluster by action_geo_country_code
+
+    
+    OPTIONS()
+    as (
+      
+
+/*
+  Dashboard tile: "Top Countries by Event Activity"
+  - X axis: country (top N by event count)
+  - Y axis: event_count (bar), avg_tone (colour scale)
+  - Filter: exclude blank country codes
+*/
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+        -- Only include events with a resolved country
+        and action_geo_country_code is not null
+        and action_geo_country_code != ''
+
+),
+
+by_country as (
+
+    select
+        action_geo_country_code,
+
+        -- Best readable name: most frequent fullname for this country code
+        -- (handles spelling variants — we take the mode)
+        approx_top_count(action_geo_fullname, 1)[offset(0)].value
+                                                            as country_name_common,
+
+        -- Volume
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+
+        -- Sentiment
+        round(avg(avg_tone),        3)                      as avg_tone,
+        round(avg(goldstein_scale), 3)                      as avg_goldstein,
+
+        -- Importance-weighted tone
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+
+        -- Conflict breakdown
+        countif(quad_class = 1)                             as verbal_coop_count,
+        countif(quad_class = 2)                             as material_coop_count,
+        countif(quad_class = 3)                             as verbal_conflict_count,
+        countif(quad_class = 4)                             as material_conflict_count,
+
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct,
+
+        -- Date range covered
+        min(event_date)                                     as first_event_date,
+        max(event_date)                                     as last_event_date
+
+    from base
+    group by 1
+
+),
+
+ranked as (
+
+    select
+        *,
+        row_number() over (order by event_count desc)       as country_rank
+    from by_country
+
+)
+
+select * from ranked
+    );
+  
+[0m10:11:14.206617 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:11:14.207326 [debug] [Thread-4 (]: On model.gdelt_pipeline.mart_daily_event_tone: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_daily_event_tone"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+      
+    partition by event_date
+    cluster by quad_class_label
+
+    
+    OPTIONS()
+    as (
+      
+
+/*
+  Dashboard tile: "Global Event Tone Over Time"
+  - X axis: event_date (last 30 days)
+  - Y axis: avg_tone (line) + event_count (bar)
+  - Series: quad_class_label (Verbal Coop / Material Coop / Verbal Conflict / Material Conflict)
+*/
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+
+),
+
+aggregated as (
+
+    select
+        event_date,
+        quad_class,
+        quad_class_label,
+
+        -- Volume metrics
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+
+        -- Sentiment / stability metrics
+        round(avg(avg_tone),         3)                     as avg_tone,
+        round(avg(goldstein_scale),  3)                     as avg_goldstein,
+
+        -- Importance-weighted tone (weighted by number of articles)
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+
+        -- Conflict share (% of events that are verbal or material conflict)
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct
+
+    from base
+    group by 1, 2, 3
+
+)
+
+select * from aggregated
+    );
+  
+[0m10:11:14.240403 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:11:15.791876 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:3bc50ed1-7689-4ea5-acc2-83f27782dbb4&page=queryresults
+[0m10:11:15.794296 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:3cd6a0e7-d01b-4165-8289-faad7887f9e8&page=queryresults
+[0m10:11:19.049335 [debug] [Thread-4 (]: SQL status: OK in 3.253 seconds
+[0m10:11:19.330346 [debug] [Thread-3 (]: SQL status: OK in 3.537 seconds
+[0m10:11:19.458645 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6dffb0>]}
+[0m10:11:19.460273 [info ] [Thread-4 (]: 3 of 3 OK created sql table model gdelt_staging_gdelt_mart.mart_daily_event_tone  [[32mCREATE TABLE (116.0 rows, 167.2 MiB processed)[0m in 5.32s]
+[0m10:11:19.461768 [debug] [Thread-4 (]: Finished running node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:11:19.716401 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9d8989b3-e6a0-4944-b93c-90d105d18041', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6c9040>]}
+[0m10:11:19.718025 [info ] [Thread-3 (]: 2 of 3 OK created sql table model gdelt_staging_gdelt_mart.mart_country_activity  [[32mCREATE TABLE (253.0 rows, 270.9 MiB processed)[0m in 5.58s]
+[0m10:11:19.719802 [debug] [Thread-3 (]: Finished running node model.gdelt_pipeline.mart_country_activity
+[0m10:11:19.722294 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:11:19.725356 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:11:19.726258 [debug] [MainThread]: Connection 'model.gdelt_pipeline.stg_gdelt_events' was properly closed.
+[0m10:11:19.726956 [debug] [MainThread]: Connection 'list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging' was properly closed.
+[0m10:11:19.727541 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_country_activity' was properly closed.
+[0m10:11:19.728094 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_daily_event_tone' was properly closed.
+[0m10:11:19.728747 [info ] [MainThread]: 
+[0m10:11:19.729369 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 10.57 seconds (10.57s).
+[0m10:11:19.733026 [debug] [MainThread]: Command end result
+[0m10:11:19.770624 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:11:19.773916 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:11:19.780033 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:11:19.780488 [info ] [MainThread]: 
+[0m10:11:19.781084 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:11:19.781678 [info ] [MainThread]: 
+[0m10:11:19.782107 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:11:19.782874 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:11:19.783724 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 15.301387, "process_in_blocks": "0", "process_kernel_time": 0.937523, "process_mem_max_rss": "219664384", "process_out_blocks": "0", "process_user_time": 6.545605}
+[0m10:11:19.784276 [debug] [MainThread]: Command `dbt run` succeeded at 10:11:19.784161 after 15.30 seconds
+[0m10:11:19.784692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dd9f3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e11bda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6faea0>]}
+[0m10:11:19.785074 [debug] [MainThread]: Flushing usage events
+[0m10:11:21.579895 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:12:07.569281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbf39e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc15220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc15130>]}
+
+
+============================== 10:12:07.576088 | dd0e3508-5bfd-42c6-97ab-42bba00bdd79 ==============================
+[0m10:12:07.576088 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:12:07.577359 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'partial_parse': 'True', 'version_check': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'fail_fast': 'False', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt test --select tag:gdelt --profiles-dir . --target prod', 'use_experimental_parser': 'False', 'log_format': 'default', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'cache_selected_only': 'False', 'use_colors': 'True', 'empty': 'None', 'warn_error': 'None', 'profiles_dir': '.', 'target_path': 'None', 'write_json': 'True', 'indirect_selection': 'eager'}
+[0m10:12:10.395954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd0e3508-5bfd-42c6-97ab-42bba00bdd79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11869eff0>]}
+[0m10:12:10.506420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd0e3508-5bfd-42c6-97ab-42bba00bdd79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0f6390>]}
+[0m10:12:10.507184 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:12:10.817373 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:12:11.168818 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:12:11.169945 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:12:11.170714 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:12:11.260430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd0e3508-5bfd-42c6-97ab-42bba00bdd79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ad01a60>]}
+[0m10:12:11.419180 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:12:11.423499 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:12:11.753843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd0e3508-5bfd-42c6-97ab-42bba00bdd79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b1add30>]}
+[0m10:12:11.754552 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 654 macros
+[0m10:12:11.755384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd0e3508-5bfd-42c6-97ab-42bba00bdd79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b194ef0>]}
+[0m10:12:11.760117 [info ] [MainThread]: 
+[0m10:12:11.762182 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:12:11.762945 [info ] [MainThread]: 
+[0m10:12:11.764757 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:12:11.776016 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart'
+[0m10:12:11.777544 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:12:11.779377 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging'
+[0m10:12:11.785304 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:12:12.956334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd0e3508-5bfd-42c6-97ab-42bba00bdd79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ad25b20>]}
+[0m10:12:12.958894 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:12:12.969226 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a
+[0m10:12:12.969831 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d
+[0m10:12:12.971013 [debug] [Thread-3 (]: Began running node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:12:12.970553 [info ] [Thread-1 (]: 1 of 14 START test accepted_values_mart_daily_event_tone_quad_class__1__2__3__4  [RUN]
+[0m10:12:12.971654 [debug] [Thread-4 (]: Began running node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:12:12.972091 [info ] [Thread-2 (]: 2 of 14 START test accepted_values_stg_gdelt_events_quad_class__1__2__3__4 ..... [RUN]
+[0m10:12:12.972578 [info ] [Thread-3 (]: 3 of 14 START test not_null_mart_country_activity_action_geo_country_code ...... [RUN]
+[0m10:12:12.973130 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart, now test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a)
+[0m10:12:12.973562 [info ] [Thread-4 (]: 4 of 14 START test not_null_mart_country_activity_country_rank ................. [RUN]
+[0m10:12:12.974049 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging, now test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d)
+[0m10:12:12.974757 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65'
+[0m10:12:12.975258 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a
+[0m10:12:12.975826 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284'
+[0m10:12:12.976261 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d
+[0m10:12:12.977093 [debug] [Thread-3 (]: Began compiling node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:12:12.994535 [debug] [Thread-4 (]: Began compiling node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:12:13.065657 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d"
+[0m10:12:13.074773 [debug] [Thread-3 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65"
+[0m10:12:13.081411 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a"
+[0m10:12:13.083519 [debug] [Thread-4 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284"
+[0m10:12:13.088928 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d
+[0m10:12:13.090681 [debug] [Thread-3 (]: Began executing node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:12:13.098129 [debug] [Thread-4 (]: Began executing node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:12:13.107906 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a
+[0m10:12:13.161876 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d"
+[0m10:12:13.171472 [debug] [Thread-4 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284"
+[0m10:12:13.179099 [debug] [Thread-3 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65"
+[0m10:12:13.177261 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a"
+[0m10:12:13.183269 [debug] [Thread-2 (]: On test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        quad_class as value_field,
+        count(*) as n_records
+
+    from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+    group by quad_class
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1','2','3','4'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:13.184529 [debug] [Thread-3 (]: On test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select action_geo_country_code
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+where action_geo_country_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:13.187762 [debug] [Thread-4 (]: On test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select country_rank
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+where country_rank is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:13.189163 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:12:13.190215 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:12:13.191133 [debug] [Thread-1 (]: On test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        quad_class as value_field,
+        count(*) as n_records
+
+    from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+    group by quad_class
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1','2','3','4'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:13.192274 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:12:13.196416 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:12:15.308203 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:0a5c89a0-2f18-4684-9166-f1f6ce2c2ddf&page=queryresults
+[0m10:12:15.309668 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:0a5c89a0-2f18-4684-9166-f1f6ce2c2ddf&page=queryresults
+[0m10:12:15.333509 [debug] [Thread-2 (]: Database Error in test accepted_values_stg_gdelt_events_quad_class__1__2__3__4 (models/staging/stg_gdelt_events.yml)
+  No matching signature for operator IN for argument types INT64 and {STRING} at [28:23]
+  compiled code at target/run/gdelt_pipeline/models/staging/stg_gdelt_events.yml/accepted_values_stg_gdelt_events_quad_class__1__2__3__4.sql
+[0m10:12:15.334524 [error] [Thread-2 (]: 2 of 14 ERROR accepted_values_stg_gdelt_events_quad_class__1__2__3__4 .......... [[31mERROR[0m in 2.36s]
+[0m10:12:15.336071 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d
+[0m10:12:15.337226 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:12:15.338049 [debug] [Thread-7 (]: Marking all children of 'test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d' to be skipped because of status 'error'.  Reason: Database Error in test accepted_values_stg_gdelt_events_quad_class__1__2__3__4 (models/staging/stg_gdelt_events.yml)
+  No matching signature for operator IN for argument types INT64 and {STRING} at [28:23]
+  compiled code at target/run/gdelt_pipeline/models/staging/stg_gdelt_events.yml/accepted_values_stg_gdelt_events_quad_class__1__2__3__4.sql.
+[0m10:12:15.338543 [info ] [Thread-2 (]: 5 of 14 START test not_null_mart_country_activity_event_count .................. [RUN]
+[0m10:12:15.341342 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__1__2__3__4.386fb8435d, now test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5)
+[0m10:12:15.342843 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:12:15.350451 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5"
+[0m10:12:15.351483 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:76c099b0-9adf-4394-a6a2-fb4951178332&page=queryresults
+[0m10:12:15.352600 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:76c099b0-9adf-4394-a6a2-fb4951178332&page=queryresults
+[0m10:12:15.357710 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:12:15.361780 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5"
+[0m10:12:15.365788 [debug] [Thread-1 (]: Database Error in test accepted_values_mart_daily_event_tone_quad_class__1__2__3__4 (models/mart/mart_models.yml)
+  No matching signature for operator IN for argument types INT64 and {STRING} at [28:23]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_models.yml/accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.sql
+[0m10:12:15.366502 [debug] [Thread-2 (]: On test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_count
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+where event_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:15.367301 [error] [Thread-1 (]: 1 of 14 ERROR accepted_values_mart_daily_event_tone_quad_class__1__2__3__4 ..... [[31mERROR[0m in 2.39s]
+[0m10:12:15.368251 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:12:15.369049 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a
+[0m10:12:15.369856 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:12:15.370450 [info ] [Thread-1 (]: 6 of 14 START test not_null_mart_daily_event_tone_event_count .................. [RUN]
+[0m10:12:15.371168 [debug] [Thread-7 (]: Marking all children of 'test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a' to be skipped because of status 'error'.  Reason: Database Error in test accepted_values_mart_daily_event_tone_quad_class__1__2__3__4 (models/mart/mart_models.yml)
+  No matching signature for operator IN for argument types INT64 and {STRING} at [28:23]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_models.yml/accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.sql.
+[0m10:12:15.371846 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.703e56515a, now test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7)
+[0m10:12:15.409577 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:12:15.415040 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7"
+[0m10:12:15.417156 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:12:15.420198 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7"
+[0m10:12:15.421277 [debug] [Thread-1 (]: On test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_count
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+where event_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:15.421787 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:12:15.471403 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:e00d31e2-b814-4cd7-9315-b2924e56bfb0&page=queryresults
+[0m10:12:15.535838 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:284f7d82-6ed6-41e3-8d51-a16b30edf9ba&page=queryresults
+[0m10:12:15.870669 [debug] [Thread-4 (]: SQL status: OK in 0.398 seconds
+[0m10:12:15.894837 [debug] [Thread-3 (]: SQL status: OK in 0.358 seconds
+[0m10:12:16.656587 [info ] [Thread-4 (]: 4 of 14 PASS not_null_mart_country_activity_country_rank ....................... [[32mPASS[0m in 3.68s]
+[0m10:12:16.657615 [debug] [Thread-4 (]: Finished running node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:12:16.658250 [debug] [Thread-4 (]: Began running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:12:16.658884 [info ] [Thread-4 (]: 7 of 14 START test not_null_mart_daily_event_tone_event_date ................... [RUN]
+[0m10:12:16.659636 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284, now test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05)
+[0m10:12:16.660109 [debug] [Thread-4 (]: Began compiling node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:12:16.666495 [debug] [Thread-4 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05"
+[0m10:12:16.667651 [debug] [Thread-4 (]: Began executing node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:12:16.670987 [debug] [Thread-4 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05"
+[0m10:12:16.676357 [info ] [Thread-3 (]: 3 of 14 PASS not_null_mart_country_activity_action_geo_country_code ............ [[32mPASS[0m in 3.70s]
+[0m10:12:16.677300 [debug] [Thread-3 (]: Finished running node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:12:16.678061 [debug] [Thread-3 (]: Began running node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:12:16.678890 [info ] [Thread-3 (]: 8 of 14 START test not_null_mart_daily_event_tone_quad_class ................... [RUN]
+[0m10:12:16.680066 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65, now test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1)
+[0m10:12:16.681084 [debug] [Thread-4 (]: On test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_date
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+where event_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:16.682061 [debug] [Thread-3 (]: Began compiling node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:12:16.683538 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:12:16.691769 [debug] [Thread-3 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1"
+[0m10:12:16.729180 [debug] [Thread-3 (]: Began executing node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:12:16.733976 [debug] [Thread-3 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1"
+[0m10:12:16.736182 [debug] [Thread-3 (]: On test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select quad_class
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+where quad_class is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:16.737237 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:12:16.811641 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:71d03984-bf9f-49bc-8768-f20c68582d80&page=queryresults
+[0m10:12:16.920233 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:fa4cb7a7-1d23-4d2f-9e1a-9fc38d47355a&page=queryresults
+[0m10:12:17.209430 [debug] [Thread-2 (]: SQL status: OK in 0.397 seconds
+[0m10:12:17.282834 [debug] [Thread-1 (]: SQL status: OK in 0.362 seconds
+[0m10:12:17.905701 [info ] [Thread-2 (]: 5 of 14 PASS not_null_mart_country_activity_event_count ........................ [[32mPASS[0m in 2.56s]
+[0m10:12:17.907055 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:12:17.907722 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:12:17.908355 [info ] [Thread-2 (]: 9 of 14 START test not_null_stg_gdelt_events_event_date ........................ [RUN]
+[0m10:12:17.909035 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5, now test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00)
+[0m10:12:17.909502 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:12:17.915292 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00"
+[0m10:12:17.916251 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:12:17.918973 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00"
+[0m10:12:17.919763 [debug] [Thread-2 (]: On test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_date
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+where event_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:17.920374 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:12:17.972373 [info ] [Thread-1 (]: 6 of 14 PASS not_null_mart_daily_event_tone_event_count ........................ [[32mPASS[0m in 2.60s]
+[0m10:12:17.973321 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:12:17.973950 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:12:17.974522 [info ] [Thread-1 (]: 10 of 14 START test not_null_stg_gdelt_events_global_event_id .................. [RUN]
+[0m10:12:17.975654 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7, now test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da)
+[0m10:12:17.976260 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:12:17.982049 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da"
+[0m10:12:17.983422 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:12:17.992604 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da"
+[0m10:12:17.994438 [debug] [Thread-1 (]: On test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select global_event_id
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+where global_event_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:17.996001 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:12:18.219787 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:3bf950af-ebfe-478e-9464-eb2a742d21b1&page=queryresults
+[0m10:12:18.577520 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:4888023d-657c-48ff-bd22-e03d324ec8d9&page=queryresults
+[0m10:12:18.651429 [debug] [Thread-3 (]: SQL status: OK in 0.430 seconds
+[0m10:12:18.967400 [debug] [Thread-4 (]: SQL status: OK in 0.388 seconds
+[0m10:12:19.351638 [info ] [Thread-3 (]: 8 of 14 PASS not_null_mart_daily_event_tone_quad_class ......................... [[32mPASS[0m in 2.67s]
+[0m10:12:19.353071 [debug] [Thread-3 (]: Finished running node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:12:19.353645 [debug] [Thread-3 (]: Began running node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:12:19.354367 [info ] [Thread-3 (]: 11 of 14 START test not_null_stg_gdelt_events_quad_class ....................... [RUN]
+[0m10:12:19.355017 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1, now test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4)
+[0m10:12:19.355453 [debug] [Thread-3 (]: Began compiling node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:12:19.361117 [debug] [Thread-3 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4"
+[0m10:12:19.362297 [debug] [Thread-3 (]: Began executing node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:12:19.365567 [debug] [Thread-3 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4"
+[0m10:12:19.366575 [debug] [Thread-3 (]: On test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select quad_class
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+where quad_class is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:19.367076 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:12:19.661805 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:0cb7daf3-944b-4589-9ef9-239040080dda&page=queryresults
+[0m10:12:19.671649 [info ] [Thread-4 (]: 7 of 14 PASS not_null_mart_daily_event_tone_event_date ......................... [[32mPASS[0m in 3.01s]
+[0m10:12:19.672548 [debug] [Thread-4 (]: Finished running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:12:19.673073 [debug] [Thread-4 (]: Began running node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:12:19.673530 [info ] [Thread-4 (]: 12 of 14 START test unique_mart_country_activity_action_geo_country_code ....... [RUN]
+[0m10:12:19.674138 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05, now test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33)
+[0m10:12:19.674593 [debug] [Thread-4 (]: Began compiling node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:12:19.686065 [debug] [Thread-4 (]: Writing injected SQL for node "test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33"
+[0m10:12:19.687504 [debug] [Thread-4 (]: Began executing node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:12:19.694244 [debug] [Thread-4 (]: Writing runtime sql for node "test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33"
+[0m10:12:19.696331 [debug] [Thread-4 (]: On test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select action_geo_country_code as unique_field
+  from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+  where action_geo_country_code is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:19.697819 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:12:19.735535 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:9357d5e8-8861-409c-adcb-3b8e08286082&page=queryresults
+[0m10:12:20.063229 [debug] [Thread-2 (]: SQL status: OK in 0.400 seconds
+[0m10:12:20.087483 [debug] [Thread-1 (]: SQL status: OK in 0.351 seconds
+[0m10:12:20.833446 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:3727e5f2-6bbc-4a63-b9df-17b412bde021&page=queryresults
+[0m10:12:20.830285 [info ] [Thread-2 (]: 9 of 14 PASS not_null_stg_gdelt_events_event_date .............................. [[32mPASS[0m in 2.92s]
+[0m10:12:20.839711 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:12:20.842692 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:12:20.851765 [info ] [Thread-2 (]: 13 of 14 START test unique_mart_country_activity_country_rank .................. [RUN]
+[0m10:12:20.852935 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00, now test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11)
+[0m10:12:20.853674 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:12:20.862404 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11"
+[0m10:12:20.864296 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:12:20.869312 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11"
+[0m10:12:20.871152 [debug] [Thread-2 (]: On test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select country_rank as unique_field
+  from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+  where country_rank is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:20.871988 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:12:21.086433 [info ] [Thread-1 (]: 10 of 14 PASS not_null_stg_gdelt_events_global_event_id ........................ [[32mPASS[0m in 3.11s]
+[0m10:12:21.088461 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:12:21.089459 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:12:21.091004 [info ] [Thread-1 (]: 14 of 14 START test unique_stg_gdelt_events_global_event_id .................... [RUN]
+[0m10:12:21.092110 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da, now test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd)
+[0m10:12:21.093052 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:12:21.104268 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd"
+[0m10:12:21.106571 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:12:21.112220 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd"
+[0m10:12:21.114275 [debug] [Thread-1 (]: On test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select global_event_id as unique_field
+  from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+  where global_event_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:12:21.115441 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:12:21.231300 [debug] [Thread-3 (]: SQL status: OK in 0.396 seconds
+[0m10:12:21.278928 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:d22caf8e-c528-476d-af28-0af4a30bfc34&page=queryresults
+[0m10:12:21.632729 [debug] [Thread-4 (]: SQL status: OK in 0.353 seconds
+[0m10:12:21.946237 [info ] [Thread-3 (]: 11 of 14 PASS not_null_stg_gdelt_events_quad_class ............................. [[32mPASS[0m in 2.59s]
+[0m10:12:21.954609 [debug] [Thread-3 (]: Finished running node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:12:22.314618 [info ] [Thread-4 (]: 12 of 14 PASS unique_mart_country_activity_action_geo_country_code ............. [[32mPASS[0m in 2.64s]
+[0m10:12:22.316126 [debug] [Thread-4 (]: Finished running node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:12:22.338895 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:55629253-eae8-41ec-b559-fadab22a5879&page=queryresults
+[0m10:12:22.701933 [debug] [Thread-2 (]: SQL status: OK in 0.362 seconds
+[0m10:12:22.960950 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:1787e3e3-3ec4-45c7-b5c7-dd5bab7619e4&page=queryresults
+[0m10:12:23.323322 [debug] [Thread-1 (]: SQL status: OK in 0.362 seconds
+[0m10:12:23.346276 [info ] [Thread-2 (]: 13 of 14 PASS unique_mart_country_activity_country_rank ........................ [[32mPASS[0m in 2.49s]
+[0m10:12:23.348063 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:12:24.039273 [error] [Thread-1 (]: 14 of 14 FAIL 123713 unique_stg_gdelt_events_global_event_id ................... [[31mFAIL 123713[0m in 2.95s]
+[0m10:12:24.041239 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:12:24.045201 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:12:24.048982 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:12:24.049750 [debug] [MainThread]: Connection 'test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd' was properly closed.
+[0m10:12:24.050502 [debug] [MainThread]: Connection 'test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11' was properly closed.
+[0m10:12:24.052843 [debug] [MainThread]: Connection 'test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4' was properly closed.
+[0m10:12:24.058408 [debug] [MainThread]: Connection 'test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33' was properly closed.
+[0m10:12:24.059178 [info ] [MainThread]: 
+[0m10:12:24.069421 [info ] [MainThread]: Finished running 14 data tests in 0 hours 0 minutes and 12.29 seconds (12.29s).
+[0m10:12:24.077417 [debug] [MainThread]: Command end result
+[0m10:12:24.331624 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:12:24.336323 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:12:24.355152 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:12:24.355771 [info ] [MainThread]: 
+[0m10:12:24.356369 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m10:12:24.356895 [info ] [MainThread]: 
+[0m10:12:24.357477 [error] [MainThread]: [31mFailure in test accepted_values_stg_gdelt_events_quad_class__1__2__3__4 (models/staging/stg_gdelt_events.yml)[0m
+[0m10:12:24.358054 [error] [MainThread]:   Database Error in test accepted_values_stg_gdelt_events_quad_class__1__2__3__4 (models/staging/stg_gdelt_events.yml)
+  No matching signature for operator IN for argument types INT64 and {STRING} at [28:23]
+  compiled code at target/run/gdelt_pipeline/models/staging/stg_gdelt_events.yml/accepted_values_stg_gdelt_events_quad_class__1__2__3__4.sql
+[0m10:12:24.358502 [info ] [MainThread]: 
+[0m10:12:24.359028 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/staging/stg_gdelt_events.yml/accepted_values_stg_gdelt_events_quad_class__1__2__3__4.sql
+[0m10:12:24.359474 [info ] [MainThread]: 
+[0m10:12:24.359997 [error] [MainThread]: [31mFailure in test accepted_values_mart_daily_event_tone_quad_class__1__2__3__4 (models/mart/mart_models.yml)[0m
+[0m10:12:24.360522 [error] [MainThread]:   Database Error in test accepted_values_mart_daily_event_tone_quad_class__1__2__3__4 (models/mart/mart_models.yml)
+  No matching signature for operator IN for argument types INT64 and {STRING} at [28:23]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_models.yml/accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.sql
+[0m10:12:24.361325 [info ] [MainThread]: 
+[0m10:12:24.362146 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/mart/mart_models.yml/accepted_values_mart_daily_event_tone_quad_class__1__2__3__4.sql
+[0m10:12:24.362676 [info ] [MainThread]: 
+[0m10:12:24.363229 [error] [MainThread]: [31mFailure in test unique_stg_gdelt_events_global_event_id (models/staging/stg_gdelt_events.yml)[0m
+[0m10:12:24.364063 [error] [MainThread]:   Got 123713 results, configured to fail if != 0
+[0m10:12:24.364681 [info ] [MainThread]: 
+[0m10:12:24.365257 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/staging/stg_gdelt_events.yml/unique_stg_gdelt_events_global_event_id.sql
+[0m10:12:24.365768 [info ] [MainThread]: 
+[0m10:12:24.366565 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=14
+[0m10:12:24.367869 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 16.921486, "process_in_blocks": "0", "process_kernel_time": 1.38859, "process_mem_max_rss": "245788672", "process_out_blocks": "0", "process_user_time": 7.096639}
+[0m10:12:24.369112 [debug] [MainThread]: Command `dbt test` failed at 10:12:24.368773 after 16.92 seconds
+[0m10:12:24.370069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e782030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbbecf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbbfc20>]}
+[0m10:12:24.371011 [debug] [MainThread]: Flushing usage events
+[0m10:12:25.467988 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:15:40.485988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112153e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d41340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d41310>]}
+
+
+============================== 10:15:40.493538 | 93bb0e7a-419e-428f-ae08-042004ec6f38 ==============================
+[0m10:15:40.493538 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:15:40.494372 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'cache_selected_only': 'False', 'invocation_command': 'dbt test --select tag:gdelt --profiles-dir . --target prod', 'quiet': 'False', 'write_json': 'True', 'warn_error': 'None', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'no_print': 'None', 'fail_fast': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'debug': 'False', 'profiles_dir': '.', 'log_format': 'default', 'log_cache_events': 'False'}
+[0m10:15:43.170894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ecbe330>]}
+[0m10:15:43.285437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11237e240>]}
+[0m10:15:43.286630 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:15:43.566168 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:15:43.834572 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m10:15:43.835799 [debug] [MainThread]: Partial parsing: updated file: gdelt_pipeline://models/staging/stg_gdelt_events.yml
+[0m10:15:43.836459 [debug] [MainThread]: Partial parsing: updated file: gdelt_pipeline://models/mart/mart_models.yml
+[0m10:15:44.356178 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_gdelt_events' in package 'gdelt_pipeline'
+(models/staging/stg_gdelt_events.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m10:15:44.357970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f5d0dd0>]}
+[0m10:15:44.514328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f37bf80>]}
+[0m10:15:44.638952 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:15:44.642680 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:15:44.701648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f6480e0>]}
+[0m10:15:44.702410 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 654 macros
+[0m10:15:44.702982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f6ff9e0>]}
+[0m10:15:44.705979 [info ] [MainThread]: 
+[0m10:15:44.706684 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:15:44.707304 [info ] [MainThread]: 
+[0m10:15:44.708109 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:15:44.719350 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart'
+[0m10:15:44.720269 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging'
+[0m10:15:44.720680 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:15:44.721208 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:15:46.093188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93bb0e7a-419e-428f-ae08-042004ec6f38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f45d460>]}
+[0m10:15:46.093925 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:15:46.099927 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b
+[0m10:15:46.100568 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0
+[0m10:15:46.101234 [info ] [Thread-1 (]: 1 of 14 START test accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4  [RUN]
+[0m10:15:46.102888 [debug] [Thread-3 (]: Began running node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:15:46.103941 [debug] [Thread-4 (]: Began running node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:15:46.104776 [info ] [Thread-2 (]: 2 of 14 START test accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4  [RUN]
+[0m10:15:46.105520 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_staging_gdelt_mart, now test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b)
+[0m10:15:46.106053 [info ] [Thread-3 (]: 3 of 14 START test not_null_mart_country_activity_action_geo_country_code ...... [RUN]
+[0m10:15:46.106864 [info ] [Thread-4 (]: 4 of 14 START test not_null_mart_country_activity_country_rank ................. [RUN]
+[0m10:15:46.107921 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_staging_gdelt_staging, now test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0)
+[0m10:15:46.109052 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b
+[0m10:15:46.110498 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65'
+[0m10:15:46.111368 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284'
+[0m10:15:46.112028 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0
+[0m10:15:46.124298 [debug] [Thread-3 (]: Began compiling node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:15:46.131167 [debug] [Thread-4 (]: Began compiling node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:15:46.130260 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b"
+[0m10:15:46.140068 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0"
+[0m10:15:46.151006 [debug] [Thread-3 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65"
+[0m10:15:46.159487 [debug] [Thread-4 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284"
+[0m10:15:46.160853 [debug] [Thread-3 (]: Began executing node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:15:46.166905 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0
+[0m10:15:46.177715 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b
+[0m10:15:46.199672 [debug] [Thread-4 (]: Began executing node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:15:46.220239 [debug] [Thread-3 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65"
+[0m10:15:46.226843 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0"
+[0m10:15:46.230653 [debug] [Thread-4 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284"
+[0m10:15:46.231331 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b"
+[0m10:15:46.233457 [debug] [Thread-4 (]: On test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select country_rank
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+where country_rank is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:46.234465 [debug] [Thread-1 (]: On test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        quad_class as value_field,
+        count(*) as n_records
+
+    from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+    group by quad_class
+
+)
+
+select *
+from all_values
+where value_field not in (
+    1,2,3,4
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:46.235412 [debug] [Thread-2 (]: On test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        quad_class as value_field,
+        count(*) as n_records
+
+    from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+    group by quad_class
+
+)
+
+select *
+from all_values
+where value_field not in (
+    1,2,3,4
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:46.236102 [debug] [Thread-3 (]: On test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select action_geo_country_code
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+where action_geo_country_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:46.237023 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:15:46.237914 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:15:46.238586 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:15:46.239502 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:15:47.579436 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:50818661-1a7f-4c8d-adcc-b6543a477136&page=queryresults
+[0m10:15:47.597257 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:bc2cffcc-958e-4387-82bb-f04babd0de1c&page=queryresults
+[0m10:15:47.797746 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:9161d38b-35fa-4573-b928-f8708174bb32&page=queryresults
+[0m10:15:47.887062 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:f18f50dd-a97c-427d-b323-f8c5c1403e6c&page=queryresults
+[0m10:15:47.937691 [debug] [Thread-3 (]: SQL status: OK in 0.339 seconds
+[0m10:15:47.971420 [debug] [Thread-4 (]: SQL status: OK in 0.391 seconds
+[0m10:15:48.137281 [debug] [Thread-1 (]: SQL status: OK in 0.338 seconds
+[0m10:15:48.229723 [debug] [Thread-2 (]: SQL status: OK in 0.341 seconds
+[0m10:15:48.817385 [info ] [Thread-3 (]: 3 of 14 PASS not_null_mart_country_activity_action_geo_country_code ............ [[32mPASS[0m in 2.71s]
+[0m10:15:48.819586 [info ] [Thread-1 (]: 1 of 14 PASS accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4  [[32mPASS[0m in 2.71s]
+[0m10:15:48.820397 [debug] [Thread-3 (]: Finished running node test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65
+[0m10:15:48.821036 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b
+[0m10:15:48.821506 [debug] [Thread-3 (]: Began running node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:15:48.822024 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:15:48.822526 [info ] [Thread-3 (]: 5 of 14 START test not_null_mart_country_activity_event_count .................. [RUN]
+[0m10:15:48.823112 [info ] [Thread-1 (]: 6 of 14 START test not_null_mart_daily_event_tone_event_count .................. [RUN]
+[0m10:15:48.824210 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_country_activity_action_geo_country_code.557b06ee65, now test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5)
+[0m10:15:48.825192 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.accepted_values_mart_daily_event_tone_quad_class__False__1__2__3__4.f57725d76b, now test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7)
+[0m10:15:48.826011 [debug] [Thread-3 (]: Began compiling node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:15:48.826595 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:15:48.837166 [debug] [Thread-3 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5"
+[0m10:15:48.849178 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7"
+[0m10:15:48.851277 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:15:48.852254 [debug] [Thread-3 (]: Began executing node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:15:48.857452 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7"
+[0m10:15:48.862781 [debug] [Thread-3 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5"
+[0m10:15:48.872522 [info ] [Thread-4 (]: 4 of 14 PASS not_null_mart_country_activity_country_rank ....................... [[32mPASS[0m in 2.76s]
+[0m10:15:48.873754 [debug] [Thread-1 (]: On test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_count
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+where event_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:48.874994 [debug] [Thread-4 (]: Finished running node test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284
+[0m10:15:48.875771 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:15:48.876649 [debug] [Thread-4 (]: Began running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:15:48.877590 [debug] [Thread-3 (]: On test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_count
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+where event_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:48.878809 [info ] [Thread-4 (]: 7 of 14 START test not_null_mart_daily_event_tone_event_date ................... [RUN]
+[0m10:15:48.882655 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:15:48.928367 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_country_activity_country_rank.998627d284, now test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05)
+[0m10:15:48.930678 [debug] [Thread-4 (]: Began compiling node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:15:48.944530 [debug] [Thread-4 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05"
+[0m10:15:48.991936 [info ] [Thread-2 (]: 2 of 14 PASS accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4 .... [[32mPASS[0m in 2.88s]
+[0m10:15:48.993488 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0
+[0m10:15:48.994450 [debug] [Thread-4 (]: Began executing node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:15:48.995020 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:15:48.998505 [debug] [Thread-4 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05"
+[0m10:15:48.999328 [info ] [Thread-2 (]: 8 of 14 START test not_null_mart_daily_event_tone_quad_class ................... [RUN]
+[0m10:15:49.000555 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.accepted_values_stg_gdelt_events_quad_class__False__1__2__3__4.2bcdb238a0, now test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1)
+[0m10:15:49.001424 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:15:49.011388 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1"
+[0m10:15:49.013170 [debug] [Thread-4 (]: On test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_date
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+where event_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:49.014981 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:15:49.016415 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:15:49.021146 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1"
+[0m10:15:49.062020 [debug] [Thread-2 (]: On test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select quad_class
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_daily_event_tone`
+where quad_class is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:49.063711 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:15:50.176291 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:8aeee0c8-08d5-4a65-8da4-679e0a0af337&page=queryresults
+[0m10:15:50.217216 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:35dcef75-5bd7-495c-bdc2-f560110b8ae0&page=queryresults
+[0m10:15:50.415888 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ceeaa08f-ba2f-44bc-aac9-e16aaa990799&page=queryresults
+[0m10:15:50.435172 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:15d43a01-79b2-4729-8527-b81afcf99e6c&page=queryresults
+[0m10:15:50.600005 [debug] [Thread-1 (]: SQL status: OK in 0.381 seconds
+[0m10:15:50.726509 [debug] [Thread-3 (]: SQL status: OK in 0.549 seconds
+[0m10:15:50.814188 [debug] [Thread-2 (]: SQL status: OK in 0.396 seconds
+[0m10:15:50.818237 [debug] [Thread-4 (]: SQL status: OK in 0.381 seconds
+[0m10:15:51.296703 [info ] [Thread-1 (]: 6 of 14 PASS not_null_mart_daily_event_tone_event_count ........................ [[32mPASS[0m in 2.47s]
+[0m10:15:51.297659 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7
+[0m10:15:51.298145 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:15:51.298622 [info ] [Thread-1 (]: 9 of 14 START test not_null_stg_gdelt_events_event_date ........................ [RUN]
+[0m10:15:51.299660 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_daily_event_tone_event_count.71740d65b7, now test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00)
+[0m10:15:51.300598 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:15:51.305997 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00"
+[0m10:15:51.307373 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:15:51.310650 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00"
+[0m10:15:51.311964 [debug] [Thread-1 (]: On test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_date
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+where event_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:51.312478 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:15:51.511959 [info ] [Thread-4 (]: 7 of 14 PASS not_null_mart_daily_event_tone_event_date ......................... [[32mPASS[0m in 2.58s]
+[0m10:15:51.513059 [debug] [Thread-4 (]: Finished running node test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05
+[0m10:15:51.513629 [debug] [Thread-4 (]: Began running node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:15:51.514212 [info ] [Thread-4 (]: 10 of 14 START test not_null_stg_gdelt_events_global_event_id .................. [RUN]
+[0m10:15:51.515024 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_daily_event_tone_event_date.411b1ffb05, now test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da)
+[0m10:15:51.515848 [debug] [Thread-4 (]: Began compiling node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:15:51.522607 [debug] [Thread-4 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da"
+[0m10:15:51.527306 [info ] [Thread-2 (]: 8 of 14 PASS not_null_mart_daily_event_tone_quad_class ......................... [[32mPASS[0m in 2.53s]
+[0m10:15:51.528483 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1
+[0m10:15:51.529295 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:15:51.529795 [info ] [Thread-2 (]: 11 of 14 START test not_null_stg_gdelt_events_quad_class ....................... [RUN]
+[0m10:15:51.530447 [debug] [Thread-4 (]: Began executing node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:15:51.531132 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_daily_event_tone_quad_class.49f7e881e1, now test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4)
+[0m10:15:51.535812 [debug] [Thread-4 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da"
+[0m10:15:51.537800 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:15:51.539997 [debug] [Thread-4 (]: On test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select global_event_id
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+where global_event_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:51.545800 [info ] [Thread-3 (]: 5 of 14 PASS not_null_mart_country_activity_event_count ........................ [[32mPASS[0m in 2.72s]
+[0m10:15:51.551456 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4"
+[0m10:15:51.552264 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:15:51.553242 [debug] [Thread-3 (]: Finished running node test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5
+[0m10:15:51.554515 [debug] [Thread-3 (]: Began running node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:15:51.555150 [info ] [Thread-3 (]: 12 of 14 START test unique_mart_country_activity_action_geo_country_code ....... [RUN]
+[0m10:15:51.556019 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_mart_country_activity_event_count.068d7d21b5, now test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33)
+[0m10:15:51.558484 [debug] [Thread-3 (]: Began compiling node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:15:51.599663 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:15:51.604404 [debug] [Thread-3 (]: Writing injected SQL for node "test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33"
+[0m10:15:51.608308 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4"
+[0m10:15:51.610005 [debug] [Thread-3 (]: Began executing node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:15:51.610796 [debug] [Thread-2 (]: On test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select quad_class
+from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+where quad_class is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:51.615108 [debug] [Thread-3 (]: Writing runtime sql for node "test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33"
+[0m10:15:51.616496 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:15:51.656438 [debug] [Thread-3 (]: On test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select action_geo_country_code as unique_field
+  from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+  where action_geo_country_code is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:51.657351 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:15:52.742764 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:f5a51efd-930e-4ccd-af85-c368ca7fb1dc&page=queryresults
+[0m10:15:52.922812 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:fef003ee-08d0-4757-ab51-0708e8a43ecb&page=queryresults
+[0m10:15:52.952341 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ffa0b724-cf3c-4617-a8ce-3420ffd0ac02&page=queryresults
+[0m10:15:53.100674 [debug] [Thread-1 (]: SQL status: OK in 0.356 seconds
+[0m10:15:53.103866 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:8b2f6fbb-109f-4133-b420-51ec39f23339&page=queryresults
+[0m10:15:53.275491 [debug] [Thread-3 (]: SQL status: OK in 0.351 seconds
+[0m10:15:53.292576 [debug] [Thread-2 (]: SQL status: OK in 0.339 seconds
+[0m10:15:53.476096 [debug] [Thread-4 (]: SQL status: OK in 0.371 seconds
+[0m10:15:53.892661 [info ] [Thread-1 (]: 9 of 14 PASS not_null_stg_gdelt_events_event_date .............................. [[32mPASS[0m in 2.59s]
+[0m10:15:53.894391 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00
+[0m10:15:53.895290 [debug] [Thread-1 (]: Began running node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:15:53.896021 [info ] [Thread-1 (]: 13 of 14 START test unique_mart_country_activity_country_rank .................. [RUN]
+[0m10:15:53.896869 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_stg_gdelt_events_event_date.4dc67a4e00, now test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11)
+[0m10:15:53.897578 [debug] [Thread-1 (]: Began compiling node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:15:53.905915 [debug] [Thread-1 (]: Writing injected SQL for node "test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11"
+[0m10:15:53.907183 [debug] [Thread-1 (]: Began executing node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:15:53.910734 [debug] [Thread-1 (]: Writing runtime sql for node "test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11"
+[0m10:15:53.911891 [debug] [Thread-1 (]: On test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select country_rank as unique_field
+  from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_mart`.`mart_country_activity`
+  where country_rank is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:53.912594 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:15:53.972192 [info ] [Thread-2 (]: 11 of 14 PASS not_null_stg_gdelt_events_quad_class ............................. [[32mPASS[0m in 2.44s]
+[0m10:15:53.973410 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4
+[0m10:15:53.974177 [debug] [Thread-2 (]: Began running node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:15:53.975002 [info ] [Thread-2 (]: 14 of 14 START test unique_stg_gdelt_events_global_event_id .................... [RUN]
+[0m10:15:53.976080 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.gdelt_pipeline.not_null_stg_gdelt_events_quad_class.a16b16bed4, now test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd)
+[0m10:15:53.976787 [debug] [Thread-2 (]: Began compiling node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:15:53.983345 [debug] [Thread-2 (]: Writing injected SQL for node "test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd"
+[0m10:15:53.984366 [debug] [Thread-2 (]: Began executing node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:15:53.987499 [debug] [Thread-2 (]: Writing runtime sql for node "test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd"
+[0m10:15:53.988646 [debug] [Thread-2 (]: On test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select global_event_id as unique_field
+  from `organic-phoenix-484620-p3`.`gdelt_staging_gdelt_staging`.`stg_gdelt_events`
+  where global_event_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:15:53.989280 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:15:54.027250 [info ] [Thread-3 (]: 12 of 14 PASS unique_mart_country_activity_action_geo_country_code ............. [[32mPASS[0m in 2.47s]
+[0m10:15:54.028489 [debug] [Thread-3 (]: Finished running node test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33
+[0m10:15:54.171559 [info ] [Thread-4 (]: 10 of 14 PASS not_null_stg_gdelt_events_global_event_id ........................ [[32mPASS[0m in 2.66s]
+[0m10:15:54.172612 [debug] [Thread-4 (]: Finished running node test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da
+[0m10:15:55.187560 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ed8e5296-6090-498b-85d0-83e26930efa0&page=queryresults
+[0m10:15:55.409782 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:524cd27c-db5d-460f-a289-a800309a5fab&page=queryresults
+[0m10:15:55.570520 [debug] [Thread-1 (]: SQL status: OK in 0.382 seconds
+[0m10:15:55.762201 [debug] [Thread-2 (]: SQL status: OK in 0.351 seconds
+[0m10:15:56.354429 [info ] [Thread-1 (]: 13 of 14 PASS unique_mart_country_activity_country_rank ........................ [[32mPASS[0m in 2.46s]
+[0m10:15:56.356018 [debug] [Thread-1 (]: Finished running node test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11
+[0m10:15:56.464211 [warn ] [Thread-2 (]: 14 of 14 WARN 123713 unique_stg_gdelt_events_global_event_id ................... [[33mWARN 123713[0m in 2.49s]
+[0m10:15:56.465839 [debug] [Thread-2 (]: Finished running node test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd
+[0m10:15:56.468818 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:15:56.472481 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:15:56.473202 [debug] [MainThread]: Connection 'test.gdelt_pipeline.unique_mart_country_activity_country_rank.d198810c11' was properly closed.
+[0m10:15:56.473773 [debug] [MainThread]: Connection 'test.gdelt_pipeline.unique_stg_gdelt_events_global_event_id.d7b68f2ecd' was properly closed.
+[0m10:15:56.474274 [debug] [MainThread]: Connection 'test.gdelt_pipeline.unique_mart_country_activity_action_geo_country_code.8b02a04d33' was properly closed.
+[0m10:15:56.474773 [debug] [MainThread]: Connection 'test.gdelt_pipeline.not_null_stg_gdelt_events_global_event_id.a4297a61da' was properly closed.
+[0m10:15:56.475331 [info ] [MainThread]: 
+[0m10:15:56.475968 [info ] [MainThread]: Finished running 14 data tests in 0 hours 0 minutes and 11.77 seconds (11.77s).
+[0m10:15:56.480046 [debug] [MainThread]: Command end result
+[0m10:15:56.512643 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:15:56.514965 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:15:56.522184 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:15:56.522607 [info ] [MainThread]: 
+[0m10:15:56.523061 [info ] [MainThread]: [33mCompleted with 1 warning:[0m
+[0m10:15:56.523774 [info ] [MainThread]: 
+[0m10:15:56.524335 [warn ] [MainThread]: [33mWarning in test unique_stg_gdelt_events_global_event_id (models/staging/stg_gdelt_events.yml)[0m
+[0m10:15:56.524846 [warn ] [MainThread]: Got 123713 results, configured to warn if != 0
+[0m10:15:56.525264 [info ] [MainThread]: 
+[0m10:15:56.525799 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/staging/stg_gdelt_events.yml/unique_stg_gdelt_events_global_event_id.sql
+[0m10:15:56.526188 [info ] [MainThread]: 
+[0m10:15:56.526662 [info ] [MainThread]: Done. PASS=13 WARN=1 ERROR=0 SKIP=0 NO-OP=0 TOTAL=14
+[0m10:15:56.527312 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:15:56.528069 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 16.154562, "process_in_blocks": "0", "process_kernel_time": 1.293373, "process_mem_max_rss": "224382976", "process_out_blocks": "0", "process_user_time": 6.619501}
+[0m10:15:56.528556 [debug] [MainThread]: Command `dbt test` succeeded at 10:15:56.528453 after 16.16 seconds
+[0m10:15:56.528950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112153e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f40a540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eebc8f0>]}
+[0m10:15:56.529673 [debug] [MainThread]: Flushing usage events
+[0m10:15:57.910359 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:24:13.623497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b23ff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2649b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2654f0>]}
+
+
+============================== 10:24:13.630941 | 0179dd25-d6f9-4326-aec8-27d7fa93f6d6 ==============================
+[0m10:24:13.630941 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:24:13.631887 [debug] [MainThread]: running dbt with arguments {'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'log_cache_events': 'False', 'warn_error': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'debug': 'False', 'static_parser': 'True', 'introspect': 'True', 'printer_width': '80', 'profiles_dir': '.', 'cache_selected_only': 'False', 'target_path': 'None', 'no_print': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'log_format': 'default', 'fail_fast': 'False', 'invocation_command': 'dbt run --select tag:gdelt --profiles-dir . --target prod', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'write_json': 'True'}
+[0m10:24:16.185333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1182b9f10>]}
+[0m10:24:16.264751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109759ee0>]}
+[0m10:24:16.265504 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:24:16.572204 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:24:16.815359 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m10:24:16.816298 [debug] [MainThread]: Partial parsing: added file: gdelt_pipeline://macros/generate_schema_name.sql
+[0m10:24:16.819635 [info ] [MainThread]: Unable to do partial parsing because change detected to override macro. Starting full parse.
+[0m10:24:18.663681 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_gdelt_events' in package 'gdelt_pipeline'
+(models/staging/stg_gdelt_events.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m10:24:18.664406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a715ee0>]}
+[0m10:24:18.992406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1183bbd10>]}
+[0m10:24:19.123018 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:24:19.128431 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:24:19.163581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11875f410>]}
+[0m10:24:19.164145 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 655 macros
+[0m10:24:19.164721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1187d5760>]}
+[0m10:24:19.167173 [info ] [MainThread]: 
+[0m10:24:19.167785 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:24:19.168515 [info ] [MainThread]: 
+[0m10:24:19.170096 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:24:19.180663 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:24:19.182738 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:24:19.183619 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:24:19.184446 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:24:21.122208 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_mart)
+[0m10:24:21.122959 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:24:21.123634 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_staging)
+[0m10:24:21.159664 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:24:22.292594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1188075f0>]}
+[0m10:24:22.293613 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:24:22.300343 [debug] [Thread-1 (]: Began running node model.gdelt_pipeline.stg_gdelt_events
+[0m10:24:22.301269 [info ] [Thread-1 (]: 1 of 3 START sql view model gdelt_staging.stg_gdelt_events ..................... [RUN]
+[0m10:24:22.302062 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_mart, now model.gdelt_pipeline.stg_gdelt_events)
+[0m10:24:22.303013 [debug] [Thread-1 (]: Began compiling node model.gdelt_pipeline.stg_gdelt_events
+[0m10:24:22.315795 [debug] [Thread-1 (]: Writing injected SQL for node "model.gdelt_pipeline.stg_gdelt_events"
+[0m10:24:22.317457 [debug] [Thread-1 (]: Began executing node model.gdelt_pipeline.stg_gdelt_events
+[0m10:24:22.357400 [debug] [Thread-1 (]: Writing runtime sql for node "model.gdelt_pipeline.stg_gdelt_events"
+[0m10:24:22.358990 [debug] [Thread-1 (]: On model.gdelt_pipeline.stg_gdelt_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.stg_gdelt_events"} */
+
+
+  create or replace view `organic-phoenix-484620-p3`.`gdelt_staging`.`stg_gdelt_events`
+  OPTIONS()
+  as 
+
+with raw as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_raw`.`events`
+
+),
+
+cleaned as (
+
+    select
+        -- ── Identifiers ──────────────────────────────────────────
+        GlobalEventID                                           as global_event_id,
+
+        -- ── Dates — cast from YYYYMMDD integer to DATE ──────────
+        parse_date('%Y%m%d', cast(Day as string))               as event_date,
+        parse_date('%Y%m%d', cast(DATEADDED as string))         as date_added,
+        Year                                                    as event_year,
+        MonthYear                                               as event_month_year,
+
+        -- ── Actor 1 ───────────────────────────────────────────
+        Actor1Code                                              as actor1_code,
+        Actor1Name                                              as actor1_name,
+        Actor1CountryCode                                       as actor1_country_code,
+        Actor1Type1Code                                         as actor1_type1_code,
+        Actor1KnownGroupCode                                    as actor1_known_group_code,
+
+        -- ── Actor 2 ───────────────────────────────────────────
+        Actor2Code                                              as actor2_code,
+        Actor2Name                                              as actor2_name,
+        Actor2CountryCode                                       as actor2_country_code,
+        Actor2Type1Code                                         as actor2_type1_code,
+        Actor2KnownGroupCode                                    as actor2_known_group_code,
+
+        -- ── Event action ──────────────────────────────────────
+        IsRootEvent                                             as is_root_event,
+        EventCode                                               as event_code,
+        EventBaseCode                                           as event_base_code,
+        EventRootCode                                           as event_root_code,
+
+        -- QuadClass labels for readability
+        QuadClass                                               as quad_class,
+        case QuadClass
+            when 1 then 'Verbal Cooperation'
+            when 2 then 'Material Cooperation'
+            when 3 then 'Verbal Conflict'
+            when 4 then 'Material Conflict'
+            else        'Unknown'
+        end                                                     as quad_class_label,
+
+        -- ── Scores ────────────────────────────────────────────
+        GoldsteinScale                                          as goldstein_scale,
+        AvgTone                                                 as avg_tone,
+        NumMentions                                             as num_mentions,
+        NumSources                                              as num_sources,
+        NumArticles                                             as num_articles,
+
+        -- ── Action geography (best field for mapping events) ──
+        ActionGeo_Type                                          as action_geo_type,
+        ActionGeo_Fullname                                      as action_geo_fullname,
+        ActionGeo_CountryCode                                   as action_geo_country_code,
+        ActionGeo_ADM1Code                                      as action_geo_adm1_code,
+        ActionGeo_Lat                                           as action_geo_lat,
+        ActionGeo_Long                                          as action_geo_long,
+        ActionGeo_FeatureID                                     as action_geo_feature_id,
+
+        -- ── Actor 1 geography ─────────────────────────────────
+        Actor1Geo_CountryCode                                   as actor1_geo_country_code,
+        Actor1Geo_Fullname                                      as actor1_geo_fullname,
+        Actor1Geo_Lat                                           as actor1_geo_lat,
+        Actor1Geo_Long                                          as actor1_geo_long,
+
+        -- ── Actor 2 geography ─────────────────────────────────
+        Actor2Geo_CountryCode                                   as actor2_geo_country_code,
+        Actor2Geo_Fullname                                      as actor2_geo_fullname,
+        Actor2Geo_Lat                                           as actor2_geo_lat,
+        Actor2Geo_Long                                          as actor2_geo_long,
+
+        -- ── Source ────────────────────────────────────────────
+        SOURCEURL                                               as source_url
+
+    from raw
+
+    where
+        -- Drop rows with no usable date
+        Day is not null
+        -- Drop rows with invalid date format (sanity check)
+        and cast(Day as string) like '20%'
+
+)
+
+select * from cleaned;
+
+
+[0m10:24:22.359794 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:24:23.769962 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:7dbfe0d0-6c9a-47b1-8baf-cedfbb9be8aa&page=queryresults
+[0m10:24:24.464735 [debug] [Thread-1 (]: SQL status: OK in 0.694 seconds
+[0m10:24:24.604321 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118152d20>]}
+[0m10:24:24.605419 [info ] [Thread-1 (]: 1 of 3 OK created sql view model gdelt_staging.stg_gdelt_events ................ [[32mCREATE VIEW (0 processed)[0m in 2.30s]
+[0m10:24:24.606704 [debug] [Thread-1 (]: Finished running node model.gdelt_pipeline.stg_gdelt_events
+[0m10:24:24.608171 [debug] [Thread-3 (]: Began running node model.gdelt_pipeline.mart_country_activity
+[0m10:24:24.609120 [info ] [Thread-3 (]: 2 of 3 START sql table model gdelt_mart.mart_country_activity .................. [RUN]
+[0m10:24:24.609746 [debug] [Thread-4 (]: Began running node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:24:24.610507 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.gdelt_pipeline.mart_country_activity'
+[0m10:24:24.611982 [info ] [Thread-4 (]: 3 of 3 START sql table model gdelt_mart.mart_daily_event_tone .................. [RUN]
+[0m10:24:24.612903 [debug] [Thread-3 (]: Began compiling node model.gdelt_pipeline.mart_country_activity
+[0m10:24:24.614138 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.gdelt_pipeline.mart_daily_event_tone'
+[0m10:24:24.619287 [debug] [Thread-3 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:24:24.620484 [debug] [Thread-4 (]: Began compiling node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:24:24.627231 [debug] [Thread-4 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_daily_event_tone"
+[0m10:24:24.628439 [debug] [Thread-3 (]: Began executing node model.gdelt_pipeline.mart_country_activity
+[0m10:24:24.659096 [debug] [Thread-4 (]: Began executing node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:24:24.688715 [debug] [Thread-3 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:24:24.696684 [debug] [Thread-4 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_daily_event_tone"
+[0m10:24:24.698131 [debug] [Thread-3 (]: On model.gdelt_pipeline.mart_country_activity: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_country_activity"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_mart`.`mart_country_activity`
+      
+    
+    cluster by action_geo_country_code
+
+    
+    OPTIONS()
+    as (
+      
+
+/*
+  Dashboard tile: "Top Countries by Event Activity"
+  - X axis: country (top N by event count)
+  - Y axis: event_count (bar), avg_tone (colour scale)
+  - Filter: exclude blank country codes
+*/
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+        -- Only include events with a resolved country
+        and action_geo_country_code is not null
+        and action_geo_country_code != ''
+
+),
+
+by_country as (
+
+    select
+        action_geo_country_code,
+
+        -- Best readable name: most frequent fullname for this country code
+        -- (handles spelling variants — we take the mode)
+        approx_top_count(action_geo_fullname, 1)[offset(0)].value
+                                                            as country_name_common,
+
+        -- Volume
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+
+        -- Sentiment
+        round(avg(avg_tone),        3)                      as avg_tone,
+        round(avg(goldstein_scale), 3)                      as avg_goldstein,
+
+        -- Importance-weighted tone
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+
+        -- Conflict breakdown
+        countif(quad_class = 1)                             as verbal_coop_count,
+        countif(quad_class = 2)                             as material_coop_count,
+        countif(quad_class = 3)                             as verbal_conflict_count,
+        countif(quad_class = 4)                             as material_conflict_count,
+
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct,
+
+        -- Date range covered
+        min(event_date)                                     as first_event_date,
+        max(event_date)                                     as last_event_date
+
+    from base
+    group by 1
+
+),
+
+ranked as (
+
+    select
+        *,
+        row_number() over (order by event_count desc)       as country_rank
+    from by_country
+
+)
+
+select * from ranked
+    );
+  
+[0m10:24:24.698912 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:24:24.699660 [debug] [Thread-4 (]: On model.gdelt_pipeline.mart_daily_event_tone: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_daily_event_tone"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_mart`.`mart_daily_event_tone`
+      
+    partition by event_date
+    cluster by quad_class_label
+
+    
+    OPTIONS()
+    as (
+      
+
+/*
+  Dashboard tile: "Global Event Tone Over Time"
+  - X axis: event_date (last 30 days)
+  - Y axis: avg_tone (line) + event_count (bar)
+  - Series: quad_class_label (Verbal Coop / Material Coop / Verbal Conflict / Material Conflict)
+*/
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+
+),
+
+aggregated as (
+
+    select
+        event_date,
+        quad_class,
+        quad_class_label,
+
+        -- Volume metrics
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+
+        -- Sentiment / stability metrics
+        round(avg(avg_tone),         3)                     as avg_tone,
+        round(avg(goldstein_scale),  3)                     as avg_goldstein,
+
+        -- Importance-weighted tone (weighted by number of articles)
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+
+        -- Conflict share (% of events that are verbal or material conflict)
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct
+
+    from base
+    group by 1, 2, 3
+
+)
+
+select * from aggregated
+    );
+  
+[0m10:24:24.700320 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:24:26.153983 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:fbbd66b3-2b86-4968-88a6-5ff402a69d32&page=queryresults
+[0m10:24:26.221779 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:2e3c39dd-9b66-4ca0-a027-e01adf2b0707&page=queryresults
+[0m10:24:30.531951 [debug] [Thread-3 (]: SQL status: OK in 4.309 seconds
+[0m10:24:30.653889 [debug] [Thread-4 (]: SQL status: OK in 4.499 seconds
+[0m10:24:30.920425 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118581700>]}
+[0m10:24:30.922019 [info ] [Thread-3 (]: 2 of 3 OK created sql table model gdelt_mart.mart_country_activity ............. [[32mCREATE TABLE (253.0 rows, 270.9 MiB processed)[0m in 6.31s]
+[0m10:24:30.923613 [debug] [Thread-3 (]: Finished running node model.gdelt_pipeline.mart_country_activity
+[0m10:24:31.005059 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0179dd25-d6f9-4326-aec8-27d7fa93f6d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118b67650>]}
+[0m10:24:31.006172 [info ] [Thread-4 (]: 3 of 3 OK created sql table model gdelt_mart.mart_daily_event_tone ............. [[32mCREATE TABLE (116.0 rows, 167.2 MiB processed)[0m in 6.39s]
+[0m10:24:31.007252 [debug] [Thread-4 (]: Finished running node model.gdelt_pipeline.mart_daily_event_tone
+[0m10:24:31.009320 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:24:31.011374 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:24:31.011967 [debug] [MainThread]: Connection 'model.gdelt_pipeline.stg_gdelt_events' was properly closed.
+[0m10:24:31.012363 [debug] [MainThread]: Connection 'list_organic-phoenix-484620-p3_gdelt_staging' was properly closed.
+[0m10:24:31.012690 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_country_activity' was properly closed.
+[0m10:24:31.013037 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_daily_event_tone' was properly closed.
+[0m10:24:31.013746 [info ] [MainThread]: 
+[0m10:24:31.014589 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 11.84 seconds (11.84s).
+[0m10:24:31.015944 [debug] [MainThread]: Command end result
+[0m10:24:31.057453 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:24:31.060011 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:24:31.067506 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:24:31.068055 [info ] [MainThread]: 
+[0m10:24:31.068790 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:24:31.069377 [info ] [MainThread]: 
+[0m10:24:31.070023 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:24:31.071166 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:24:31.072378 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 17.556229, "process_in_blocks": "0", "process_kernel_time": 1.21221, "process_mem_max_rss": "220123136", "process_out_blocks": "0", "process_user_time": 6.946071}
+[0m10:24:31.073055 [debug] [MainThread]: Command `dbt run` succeeded at 10:24:31.072908 after 17.56 seconds
+[0m10:24:31.073577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfb3f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1186f5580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118a79cd0>]}
+[0m10:24:31.074070 [debug] [MainThread]: Flushing usage events
+[0m10:24:32.215827 [debug] [MainThread]: An error was encountered while trying to flush usage events

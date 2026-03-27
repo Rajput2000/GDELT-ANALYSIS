@@ -63,4 +63,3 @@ aggregated as (
 )
 
 select * from aggregated
-order by event_date, quad_class

@@ -82,4 +82,3 @@ ranked as (
 )
 
 select * from ranked
-order by country_rank
