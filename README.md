@@ -67,7 +67,7 @@ This project solves that by building a fully automated pipeline that turns the r
 | Data Lake | [Google Cloud Storage](https://cloud.google.com/storage) | Raw GDELT CSV files, date-partitioned |
 | Data Warehouse | [BigQuery](https://cloud.google.com/bigquery) | Ingestion-time partitioned, clustered by country + event type |
 | Transformations | [dbt](https://www.getdbt.com/) | Staging views + mart tables with tests |
-| Dashboard | [Looker Studio](https://lookerstudio.google.com/) | Two-tile live dashboard connected to BigQuery mart |
+| Dashboard | [Looker Studio](https://lookerstudio.google.com/) | Live dashboard connected to BigQuery mart |
 
 ---
 
@@ -80,6 +80,13 @@ Daily average media tone and event volume over the last 30 days, broken down by 
 
 **Top Countries by Event Activity** *(categorical)*
 Bar chart of the most active countries in global news over the last 30 days, coloured by average tone. Reveals which countries are dominating coverage and whether that coverage is positive or negative.
+
+**Most Volatile Day** *(scorecard)*
+Single-value card highlighting the day with the highest conflict percentage over the last 30 days. Useful for pinpointing specific dates where global tension spiked, which can be cross-referenced against real-world news events.
+
+**Global News Sentiment Map** *(geo chart)*
+World map where each country is coloured by its average media tone — red for negative coverage, green for positive. Immediately reveals which regions are experiencing the most negative news narratives.
+
 
 > 🔗 **[View the live dashboard](https://lookerstudio.google.com/reporting/1ed1c608-2d93-4040-806d-867be4332501)**
 

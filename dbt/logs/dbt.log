@@ -2489,3 +2489,810 @@ parsing.
 [0m10:24:31.073577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfb3f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1186f5580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118a79cd0>]}
 [0m10:24:31.074070 [debug] [MainThread]: Flushing usage events
 [0m10:24:32.215827 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:45:13.398621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f29f5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ec613a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ec61490>]}
+
+
+============================== 10:45:13.405524 | adda642c-78ef-47f6-99c2-54b6994d6b40 ==============================
+[0m10:45:13.405524 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:45:13.406391 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'profiles_dir': '.', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default', 'empty': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'invocation_command': 'dbt run --select mart_country_activity --profiles-dir . --target prod', 'quiet': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'static_parser': 'True', 'warn_error': 'None', 'version_check': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m10:45:13.420849 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DBT_GCP_PROJECT'
+[0m10:45:13.421867 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.12147487, "process_in_blocks": "0", "process_kernel_time": 0.347515, "process_mem_max_rss": "100921344", "process_out_blocks": "0", "process_user_time": 1.680416}
+[0m10:45:13.422475 [debug] [MainThread]: Command `dbt run` failed at 10:45:13.422345 after 0.12 seconds
+[0m10:45:13.422900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f165730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ec613a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f729ac0>]}
+[0m10:45:13.423322 [debug] [MainThread]: Flushing usage events
+[0m10:45:15.039894 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:54:04.323056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141341a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141376b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113ab53d0>]}
+
+
+============================== 10:54:04.330327 | b7033978-f460-49d8-ad13-bbb09272b30b ==============================
+[0m10:54:04.330327 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:54:04.331145 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'quiet': 'False', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'static_parser': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'introspect': 'True', 'log_format': 'default', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'warn_error': 'None', 'write_json': 'True', 'version_check': 'True', 'partial_parse': 'True', 'profiles_dir': '.', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'invocation_command': 'dbt run --select mart_country_activity --profiles-dir . --target prod', 'printer_width': '80', 'debug': 'False'}
+[0m10:54:07.204466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1208f9a60>]}
+[0m10:54:07.376550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc983e0>]}
+[0m10:54:07.377838 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:54:07.686941 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:54:07.945909 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:54:07.946735 [debug] [MainThread]: Partial parsing: updated file: gdelt_pipeline://models/mart/mart_country_activity.sql
+[0m10:54:08.535696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12126e300>]}
+[0m10:54:08.711155 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:54:08.715829 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:54:08.755614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1213ac230>]}
+[0m10:54:08.756411 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 655 macros
+[0m10:54:08.756954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120f5b620>]}
+[0m10:54:08.760236 [info ] [MainThread]: 
+[0m10:54:08.761036 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:54:08.761548 [info ] [MainThread]: 
+[0m10:54:08.762783 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:54:08.764628 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:54:08.765319 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:11.124151 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_mart)
+[0m10:54:11.125171 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:54:11.126123 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging'
+[0m10:54:11.127070 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:12.908437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1213b77a0>]}
+[0m10:54:12.909426 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:54:12.917463 [debug] [Thread-1 (]: Began running node model.gdelt_pipeline.mart_country_activity
+[0m10:54:12.918473 [info ] [Thread-1 (]: 1 of 1 START sql table model gdelt_mart.mart_country_activity .................. [RUN]
+[0m10:54:12.919312 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_mart, now model.gdelt_pipeline.mart_country_activity)
+[0m10:54:12.920098 [debug] [Thread-1 (]: Began compiling node model.gdelt_pipeline.mart_country_activity
+[0m10:54:12.933103 [debug] [Thread-1 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:54:12.934600 [debug] [Thread-1 (]: Began executing node model.gdelt_pipeline.mart_country_activity
+[0m10:54:12.956176 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:54:14.820169 [debug] [Thread-1 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:54:14.821947 [debug] [Thread-1 (]: On model.gdelt_pipeline.mart_country_activity: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_country_activity"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_mart`.`mart_country_activity`
+      
+    
+    cluster by action_geo_country_code
+
+    
+    OPTIONS()
+    as (
+      
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+        and action_geo_country_code is not null
+        and action_geo_country_code != ''
+
+),
+
+by_country as (
+
+    select
+        action_geo_country_code,
+
+        approx_top_count(action_geo_fullname, 1)[offset(0)].value
+                                                            as country_name_common,
+
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+        round(avg(avg_tone),        3)                      as avg_tone,
+        round(avg(goldstein_scale), 3)                      as avg_goldstein,
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+        countif(quad_class = 1)                             as verbal_coop_count,
+        countif(quad_class = 2)                             as material_coop_count,
+        countif(quad_class = 3)                             as verbal_conflict_count,
+        countif(quad_class = 4)                             as material_conflict_count,
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct,
+        min(event_date)                                     as first_event_date,
+        max(event_date)                                     as last_event_date
+
+    from base
+    group by 1
+
+),
+
+-- ─────────────────────────────────────────────────────────
+-- FIPS10-4 → ISO 3166-1 alpha-2 crosswalk
+-- Looker Studio Geo charts require ISO codes or country names
+-- Most common GDELT country codes mapped here
+-- ─────────────────────────────────────────────────────────
+fips_to_iso as (
+
+    select fips, iso from unnest([
+        struct('US' as fips, 'US' as iso),
+        struct('UK', 'GB'),
+        struct('FR', 'FR'),
+        struct('GM', 'DE'),
+        struct('RS', 'RU'),
+        struct('CH', 'CN'),
+        struct('IN', 'IN'),
+        struct('BR', 'BR'),
+        struct('MX', 'MX'),
+        struct('IT', 'IT'),
+        struct('SP', 'ES'),
+        struct('PO', 'PT'),
+        struct('JA', 'JP'),
+        struct('KS', 'KR'),
+        struct('AU', 'AU'),
+        struct('CA', 'CA'),
+        struct('IS', 'IL'),
+        struct('EG', 'EG'),
+        struct('SA', 'SA'),
+        struct('IR', 'IR'),
+        struct('IZ', 'IQ'),
+        struct('SY', 'SY'),
+        struct('TU', 'TR'),
+        struct('PK', 'PK'),
+        struct('AF', 'AF'),
+        struct('NI', 'NG'),
+        struct('SF', 'ZA'),
+        struct('KE', 'KE'),
+        struct('ET', 'ET'),
+        struct('SU', 'SD'),
+        struct('LY', 'LY'),
+        struct('MO', 'MA'),
+        struct('AG', 'DZ'),
+        struct('GH', 'GH'),
+        struct('IV', 'CI'),
+        struct('SE', 'SN'),
+        struct('UG', 'UG'),
+        struct('TZ', 'TZ'),
+        struct('AO', 'AO'),
+        struct('ZI', 'ZW'),
+        struct('ZA', 'ZM'),
+        struct('MZ', 'MZ'),
+        struct('BC', 'BW'),
+        struct('WA', 'NA'),
+        struct('UP', 'UA'),
+        struct('PL', 'PL'),
+        struct('HU', 'HU'),
+        struct('RO', 'RO'),
+        struct('BK', 'BA'),
+        struct('HR', 'HR'),
+        struct('SI', 'SI'),
+        struct('GR', 'GR'),
+        struct('BU', 'BG'),
+        struct('EZ', 'CZ'),
+        struct('LO', 'SK'),
+        struct('EN', 'EE'),
+        struct('LG', 'LV'),
+        struct('LH', 'LT'),
+        struct('FI', 'FI'),
+        struct('SW', 'SE'),
+        struct('NO', 'NO'),
+        struct('DA', 'DK'),
+        struct('NL', 'NL'),
+        struct('BE', 'BE'),
+        struct('SZ', 'CH'),
+        struct('AU', 'AT'),
+        struct('VE', 'VE'),
+        struct('CO', 'CO'),
+        struct('AR', 'AR'),
+        struct('CI', 'CL'),
+        struct('PE', 'PE'),
+        struct('EC', 'EC'),
+        struct('BO', 'BO'),
+        struct('UY', 'UY'),
+        struct('CU', 'CU'),
+        struct('DR', 'DO'),
+        struct('HA', 'HT'),
+        struct('JM', 'JM'),
+        struct('TD', 'TH'),
+        struct('VM', 'VN'),
+        struct('MY', 'MY'),
+        struct('ID', 'ID'),
+        struct('RP', 'PH'),
+        struct('SN', 'SG'),
+        struct('NZ', 'NZ'),
+        struct('BD', 'BD'),
+        struct('CE', 'LK'),
+        struct('NP', 'NP'),
+        struct('BM', 'MM'),
+        struct('CB', 'KH'),
+        struct('LA', 'LA'),
+        struct('KZ', 'KZ'),
+        struct('UZ', 'UZ'),
+        struct('AJ', 'AZ'),
+        struct('GG', 'GE'),
+        struct('AM', 'AM'),
+        struct('MO', 'MN'),
+        struct('JO', 'JO'),
+        struct('LE', 'LB'),
+        struct('PA', 'PS'),
+        struct('KU', 'KW'),
+        struct('BA', 'BH'),
+        struct('QA', 'QA'),
+        struct('TC', 'AE'),
+        struct('YM', 'YE'),
+        struct('OM', 'OM')
+    ] as t)
+
+),
+
+ranked as (
+
+    select
+        b.*,
+        coalesce(f.iso, b.action_geo_country_code)          as iso_country_code,
+        row_number() over (order by event_count desc)       as country_rank
+    from by_country b
+    left join fips_to_iso f on b.action_geo_country_code = f.fips
+
+)
+
+select * from ranked
+order by country_rank
+    );
+  
+[0m10:54:15.786258 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:f90ace8e-97ea-44c7-a991-a042768ddaeb&page=queryresults
+[0m10:54:16.693713 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:f90ace8e-97ea-44c7-a991-a042768ddaeb&page=queryresults
+[0m10:54:16.724086 [debug] [Thread-1 (]: Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Argument alias is not supported in the UNNEST operator at [176:7]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:54:16.727552 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7033978-f460-49d8-ad13-bbb09272b30b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113a5d010>]}
+[0m10:54:16.728799 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model gdelt_mart.mart_country_activity ......... [[31mERROR[0m in 3.81s]
+[0m10:54:16.729708 [debug] [Thread-1 (]: Finished running node model.gdelt_pipeline.mart_country_activity
+[0m10:54:16.730649 [debug] [Thread-7 (]: Marking all children of 'model.gdelt_pipeline.mart_country_activity' to be skipped because of status 'error'.  Reason: Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Argument alias is not supported in the UNNEST operator at [176:7]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql.
+[0m10:54:16.733701 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:54:16.736200 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:54:16.736724 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_country_activity' was properly closed.
+[0m10:54:16.737119 [debug] [MainThread]: Connection 'list_organic-phoenix-484620-p3_gdelt_staging' was properly closed.
+[0m10:54:16.737626 [info ] [MainThread]: 
+[0m10:54:16.738261 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.98 seconds (7.98s).
+[0m10:54:16.739233 [debug] [MainThread]: Command end result
+[0m10:54:16.772722 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:54:16.775243 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:54:16.783622 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:54:16.784112 [info ] [MainThread]: 
+[0m10:54:16.784653 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:54:16.785112 [info ] [MainThread]: 
+[0m10:54:16.785608 [error] [MainThread]: [31mFailure in model mart_country_activity (models/mart/mart_country_activity.sql)[0m
+[0m10:54:16.786418 [error] [MainThread]:   Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Argument alias is not supported in the UNNEST operator at [176:7]
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:54:16.786892 [info ] [MainThread]: 
+[0m10:54:16.787396 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:54:16.787751 [info ] [MainThread]: 
+[0m10:54:16.788139 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:54:16.788884 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 12.568145, "process_in_blocks": "0", "process_kernel_time": 1.122524, "process_mem_max_rss": "217935872", "process_out_blocks": "0", "process_user_time": 4.855833}
+[0m10:54:16.789441 [debug] [MainThread]: Command `dbt run` failed at 10:54:16.789327 after 12.57 seconds
+[0m10:54:16.789938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113ab5340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12104a240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1214c7d70>]}
+[0m10:54:16.790712 [debug] [MainThread]: Flushing usage events
+[0m10:54:18.191166 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:56:58.990837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c54fc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d287e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d287b60>]}
+
+
+============================== 10:56:58.997485 | 225aacbe-f38e-4f97-86d4-609a745f57eb ==============================
+[0m10:56:58.997485 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:56:58.998260 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '.', 'static_parser': 'True', 'warn_error': 'None', 'use_colors': 'True', 'write_json': 'True', 'invocation_command': 'dbt run --select mart_country_activity --profiles-dir . --target prod', 'partial_parse': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'no_print': 'None', 'version_check': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'debug': 'False', 'target_path': 'None'}
+[0m10:57:00.882881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11940c920>]}
+[0m10:57:00.960276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1194a9550>]}
+[0m10:57:00.961077 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:57:01.187987 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:57:01.370116 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:57:01.371093 [debug] [MainThread]: Partial parsing: updated file: gdelt_pipeline://models/mart/mart_country_activity.sql
+[0m10:57:01.930926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119c197c0>]}
+[0m10:57:02.050676 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:57:02.053617 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:57:02.075502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119eefa40>]}
+[0m10:57:02.076211 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 655 macros
+[0m10:57:02.076868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119b20b60>]}
+[0m10:57:02.079189 [info ] [MainThread]: 
+[0m10:57:02.079736 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:57:02.080186 [info ] [MainThread]: 
+[0m10:57:02.080828 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:57:02.082016 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:57:02.083191 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:57:03.804166 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_mart)
+[0m10:57:03.805360 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging'
+[0m10:57:03.806022 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:57:03.806708 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:57:05.344518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119f3bad0>]}
+[0m10:57:05.345488 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:57:05.351123 [debug] [Thread-1 (]: Began running node model.gdelt_pipeline.mart_country_activity
+[0m10:57:05.352138 [info ] [Thread-1 (]: 1 of 1 START sql table model gdelt_mart.mart_country_activity .................. [RUN]
+[0m10:57:05.352893 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_mart, now model.gdelt_pipeline.mart_country_activity)
+[0m10:57:05.353494 [debug] [Thread-1 (]: Began compiling node model.gdelt_pipeline.mart_country_activity
+[0m10:57:05.366014 [debug] [Thread-1 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:57:05.367651 [debug] [Thread-1 (]: Began executing node model.gdelt_pipeline.mart_country_activity
+[0m10:57:05.386450 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:57:07.081474 [debug] [Thread-1 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:57:07.083452 [debug] [Thread-1 (]: On model.gdelt_pipeline.mart_country_activity: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_country_activity"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_mart`.`mart_country_activity`
+      
+    
+    cluster by action_geo_country_code
+
+    
+    OPTIONS()
+    as (
+      
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+        and action_geo_country_code is not null
+        and action_geo_country_code != ''
+
+),
+
+by_country as (
+
+    select
+        action_geo_country_code,
+
+        approx_top_count(action_geo_fullname, 1)[offset(0)].value
+                                                            as country_name_common,
+
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+        round(avg(avg_tone),        3)                      as avg_tone,
+        round(avg(goldstein_scale), 3)                      as avg_goldstein,
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+        countif(quad_class = 1)                             as verbal_coop_count,
+        countif(quad_class = 2)                             as material_coop_count,
+        countif(quad_class = 3)                             as verbal_conflict_count,
+        countif(quad_class = 4)                             as material_conflict_count,
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct,
+        min(event_date)                                     as first_event_date,
+        max(event_date)                                     as last_event_date
+
+    from base
+    group by 1
+
+),
+
+-- ─────────────────────────────────────────────────────────
+-- FIPS10-4 → ISO 3166-1 alpha-2 crosswalk
+-- Looker Studio Geo charts require ISO codes or country names
+-- Most common GDELT country codes mapped here
+-- ─────────────────────────────────────────────────────────
+fips_to_iso as (
+
+    select fips, iso from unnest([
+        struct('US' as fips, 'US' as iso),
+        struct('UK', 'GB'),
+        struct('FR', 'FR'),
+        struct('GM', 'DE'),
+        struct('RS', 'RU'),
+        struct('CH', 'CN'),
+        struct('IN', 'IN'),
+        struct('BR', 'BR'),
+        struct('MX', 'MX'),
+        struct('IT', 'IT'),
+        struct('SP', 'ES'),
+        struct('PO', 'PT'),
+        struct('JA', 'JP'),
+        struct('KS', 'KR'),
+        struct('AU', 'AU'),
+        struct('CA', 'CA'),
+        struct('IS', 'IL'),
+        struct('EG', 'EG'),
+        struct('SA', 'SA'),
+        struct('IR', 'IR'),
+        struct('IZ', 'IQ'),
+        struct('SY', 'SY'),
+        struct('TU', 'TR'),
+        struct('PK', 'PK'),
+        struct('AF', 'AF'),
+        struct('NI', 'NG'),
+        struct('SF', 'ZA'),
+        struct('KE', 'KE'),
+        struct('ET', 'ET'),
+        struct('SU', 'SD'),
+        struct('LY', 'LY'),
+        struct('MO', 'MA'),
+        struct('AG', 'DZ'),
+        struct('GH', 'GH'),
+        struct('IV', 'CI'),
+        struct('SE', 'SN'),
+        struct('UG', 'UG'),
+        struct('TZ', 'TZ'),
+        struct('AO', 'AO'),
+        struct('ZI', 'ZW'),
+        struct('ZA', 'ZM'),
+        struct('MZ', 'MZ'),
+        struct('BC', 'BW'),
+        struct('WA', 'NA'),
+        struct('UP', 'UA'),
+        struct('PL', 'PL'),
+        struct('HU', 'HU'),
+        struct('RO', 'RO'),
+        struct('BK', 'BA'),
+        struct('HR', 'HR'),
+        struct('SI', 'SI'),
+        struct('GR', 'GR'),
+        struct('BU', 'BG'),
+        struct('EZ', 'CZ'),
+        struct('LO', 'SK'),
+        struct('EN', 'EE'),
+        struct('LG', 'LV'),
+        struct('LH', 'LT'),
+        struct('FI', 'FI'),
+        struct('SW', 'SE'),
+        struct('NO', 'NO'),
+        struct('DA', 'DK'),
+        struct('NL', 'NL'),
+        struct('BE', 'BE'),
+        struct('SZ', 'CH'),
+        struct('AU', 'AT'),
+        struct('VE', 'VE'),
+        struct('CO', 'CO'),
+        struct('AR', 'AR'),
+        struct('CI', 'CL'),
+        struct('PE', 'PE'),
+        struct('EC', 'EC'),
+        struct('BO', 'BO'),
+        struct('UY', 'UY'),
+        struct('CU', 'CU'),
+        struct('DR', 'DO'),
+        struct('HA', 'HT'),
+        struct('JM', 'JM'),
+        struct('TD', 'TH'),
+        struct('VM', 'VN'),
+        struct('MY', 'MY'),
+        struct('ID', 'ID'),
+        struct('RP', 'PH'),
+        struct('SN', 'SG'),
+        struct('NZ', 'NZ'),
+        struct('BD', 'BD'),
+        struct('CE', 'LK'),
+        struct('NP', 'NP'),
+        struct('BM', 'MM'),
+        struct('CB', 'KH'),
+        struct('LA', 'LA'),
+        struct('KZ', 'KZ'),
+        struct('UZ', 'UZ'),
+        struct('AJ', 'AZ'),
+        struct('GG', 'GE'),
+        struct('AM', 'AM'),
+        struct('MO', 'MN'),
+        struct('JO', 'JO'),
+        struct('LE', 'LB'),
+        struct('PA', 'PS'),
+        struct('KU', 'KW'),
+        struct('BA', 'BH'),
+        struct('QA', 'QA'),
+        struct('TC', 'AE'),
+        struct('YM', 'YE'),
+        struct('OM', 'OM')
+    ]) as t
+
+),
+
+ranked as (
+
+    select
+        b.*,
+        coalesce(f.iso, b.action_geo_country_code)          as iso_country_code,
+        row_number() over (order by event_count desc)       as country_rank
+    from by_country b
+    left join fips_to_iso f on b.action_geo_country_code = f.fips
+
+)
+
+select * from ranked
+order by country_rank
+    );
+  
+[0m10:57:07.896925 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ab03a835-4d1e-4481-9909-c73c5cd89f42&page=queryresults
+[0m10:57:08.741521 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:ab03a835-4d1e-4481-9909-c73c5cd89f42&page=queryresults
+[0m10:57:08.752211 [debug] [Thread-1 (]: Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Result of ORDER BY queries cannot be clustered.
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:57:08.754223 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '225aacbe-f38e-4f97-86d4-609a745f57eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119ec2ea0>]}
+[0m10:57:08.755155 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model gdelt_mart.mart_country_activity ......... [[31mERROR[0m in 3.40s]
+[0m10:57:08.755962 [debug] [Thread-1 (]: Finished running node model.gdelt_pipeline.mart_country_activity
+[0m10:57:08.756598 [debug] [Thread-7 (]: Marking all children of 'model.gdelt_pipeline.mart_country_activity' to be skipped because of status 'error'.  Reason: Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Result of ORDER BY queries cannot be clustered.
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql.
+[0m10:57:08.759500 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:57:08.762346 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:57:08.762967 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_country_activity' was properly closed.
+[0m10:57:08.763447 [debug] [MainThread]: Connection 'list_organic-phoenix-484620-p3_gdelt_staging' was properly closed.
+[0m10:57:08.763829 [info ] [MainThread]: 
+[0m10:57:08.764218 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.68 seconds (6.68s).
+[0m10:57:08.764993 [debug] [MainThread]: Command end result
+[0m10:57:08.804456 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:57:08.806603 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:57:08.813089 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:57:08.813654 [info ] [MainThread]: 
+[0m10:57:08.814251 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:57:08.814875 [info ] [MainThread]: 
+[0m10:57:08.815531 [error] [MainThread]: [31mFailure in model mart_country_activity (models/mart/mart_country_activity.sql)[0m
+[0m10:57:08.816120 [error] [MainThread]:   Database Error in model mart_country_activity (models/mart/mart_country_activity.sql)
+  Result of ORDER BY queries cannot be clustered.
+  compiled code at target/run/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:57:08.816527 [info ] [MainThread]: 
+[0m10:57:08.817021 [info ] [MainThread]:   compiled code at target/compiled/gdelt_pipeline/models/mart/mart_country_activity.sql
+[0m10:57:08.817422 [info ] [MainThread]: 
+[0m10:57:08.817889 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:57:08.818759 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 9.919471, "process_in_blocks": "0", "process_kernel_time": 0.887984, "process_mem_max_rss": "215580672", "process_out_blocks": "0", "process_user_time": 4.827284}
+[0m10:57:08.819307 [debug] [MainThread]: Command `dbt run` failed at 10:57:08.819194 after 9.92 seconds
+[0m10:57:08.819843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d287ce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119796930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119a6cc80>]}
+[0m10:57:08.820571 [debug] [MainThread]: Flushing usage events
+[0m10:57:11.170217 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:58:21.158025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e35bef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e37d370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e37d340>]}
+
+
+============================== 10:58:21.163094 | 7abc961b-9a1c-4883-82ec-a4e225c82eb3 ==============================
+[0m10:58:21.163094 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:58:21.163883 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'warn_error': 'None', 'profiles_dir': '.', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'target_path': 'None', 'printer_width': '80', 'log_cache_events': 'False', 'debug': 'False', 'log_path': '/Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'introspect': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'invocation_command': 'dbt run --select mart_country_activity --profiles-dir . --target prod', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'version_check': 'True', 'quiet': 'False'}
+[0m10:58:22.837707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b4612b0>]}
+[0m10:58:22.928006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8a2300>]}
+[0m10:58:22.929042 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m10:58:23.175904 [debug] [MainThread]: checksum: 6b6e0ebcaf85ad01fb66001734c8a9de1fddab0bc26fac0e88d715ed9207abc1, vars: {}, profile: , target: prod, version: 1.11.7
+[0m10:58:23.369646 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:58:23.370457 [debug] [MainThread]: Partial parsing: updated file: gdelt_pipeline://models/mart/mart_country_activity.sql
+[0m10:58:23.977868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ba51e20>]}
+[0m10:58:24.107393 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:58:24.111014 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:58:24.134824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bcb8830>]}
+[0m10:58:24.135516 [info ] [MainThread]: Found 3 models, 17 data tests, 1 source, 655 macros
+[0m10:58:24.136109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b870800>]}
+[0m10:58:24.139099 [info ] [MainThread]: 
+[0m10:58:24.139865 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m10:58:24.140475 [info ] [MainThread]: 
+[0m10:58:24.142309 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:58:24.143718 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3'
+[0m10:58:24.144326 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:58:26.094435 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3, now list_organic-phoenix-484620-p3_gdelt_mart)
+[0m10:58:26.095642 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:58:26.097083 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_organic-phoenix-484620-p3_gdelt_staging'
+[0m10:58:26.137042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:58:27.980380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bcd9400>]}
+[0m10:58:27.981568 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:58:27.988046 [debug] [Thread-1 (]: Began running node model.gdelt_pipeline.mart_country_activity
+[0m10:58:27.989132 [info ] [Thread-1 (]: 1 of 1 START sql table model gdelt_mart.mart_country_activity .................. [RUN]
+[0m10:58:27.990081 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_organic-phoenix-484620-p3_gdelt_mart, now model.gdelt_pipeline.mart_country_activity)
+[0m10:58:27.990706 [debug] [Thread-1 (]: Began compiling node model.gdelt_pipeline.mart_country_activity
+[0m10:58:28.004393 [debug] [Thread-1 (]: Writing injected SQL for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:58:28.006529 [debug] [Thread-1 (]: Began executing node model.gdelt_pipeline.mart_country_activity
+[0m10:58:28.023357 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:58:29.834923 [debug] [Thread-1 (]: Writing runtime sql for node "model.gdelt_pipeline.mart_country_activity"
+[0m10:58:29.837104 [debug] [Thread-1 (]: On model.gdelt_pipeline.mart_country_activity: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "gdelt_pipeline", "target_name": "prod", "node_id": "model.gdelt_pipeline.mart_country_activity"} */
+
+  
+    
+
+    create or replace table `organic-phoenix-484620-p3`.`gdelt_mart`.`mart_country_activity`
+      
+    
+    cluster by action_geo_country_code
+
+    
+    OPTIONS()
+    as (
+      
+
+with base as (
+
+    select * from `organic-phoenix-484620-p3`.`gdelt_staging`.`stg_gdelt_events`
+
+    where
+        event_date >= date_sub(current_date(), interval 30 day)
+        and event_date < current_date()
+        and action_geo_country_code is not null
+        and action_geo_country_code != ''
+
+),
+
+by_country as (
+
+    select
+        action_geo_country_code,
+
+        approx_top_count(action_geo_fullname, 1)[offset(0)].value
+                                                            as country_name_common,
+
+        count(*)                                            as event_count,
+        sum(num_mentions)                                   as total_mentions,
+        sum(num_articles)                                   as total_articles,
+        round(avg(avg_tone),        3)                      as avg_tone,
+        round(avg(goldstein_scale), 3)                      as avg_goldstein,
+        round(
+            sum(avg_tone * num_articles)
+            / nullif(sum(num_articles), 0),
+            3
+        )                                                   as weighted_avg_tone,
+        countif(quad_class = 1)                             as verbal_coop_count,
+        countif(quad_class = 2)                             as material_coop_count,
+        countif(quad_class = 3)                             as verbal_conflict_count,
+        countif(quad_class = 4)                             as material_conflict_count,
+        round(
+            countif(quad_class in (3, 4)) / count(*) * 100,
+            2
+        )                                                   as conflict_pct,
+        min(event_date)                                     as first_event_date,
+        max(event_date)                                     as last_event_date
+
+    from base
+    group by 1
+
+),
+
+-- ─────────────────────────────────────────────────────────
+-- FIPS10-4 → ISO 3166-1 alpha-2 crosswalk
+-- Looker Studio Geo charts require ISO codes or country names
+-- Most common GDELT country codes mapped here
+-- ─────────────────────────────────────────────────────────
+fips_to_iso as (
+
+    select fips, iso from unnest([
+        struct('US' as fips, 'US' as iso),
+        struct('UK', 'GB'),
+        struct('FR', 'FR'),
+        struct('GM', 'DE'),
+        struct('RS', 'RU'),
+        struct('CH', 'CN'),
+        struct('IN', 'IN'),
+        struct('BR', 'BR'),
+        struct('MX', 'MX'),
+        struct('IT', 'IT'),
+        struct('SP', 'ES'),
+        struct('PO', 'PT'),
+        struct('JA', 'JP'),
+        struct('KS', 'KR'),
+        struct('AU', 'AU'),
+        struct('CA', 'CA'),
+        struct('IS', 'IL'),
+        struct('EG', 'EG'),
+        struct('SA', 'SA'),
+        struct('IR', 'IR'),
+        struct('IZ', 'IQ'),
+        struct('SY', 'SY'),
+        struct('TU', 'TR'),
+        struct('PK', 'PK'),
+        struct('AF', 'AF'),
+        struct('NI', 'NG'),
+        struct('SF', 'ZA'),
+        struct('KE', 'KE'),
+        struct('ET', 'ET'),
+        struct('SU', 'SD'),
+        struct('LY', 'LY'),
+        struct('MO', 'MA'),
+        struct('AG', 'DZ'),
+        struct('GH', 'GH'),
+        struct('IV', 'CI'),
+        struct('SE', 'SN'),
+        struct('UG', 'UG'),
+        struct('TZ', 'TZ'),
+        struct('AO', 'AO'),
+        struct('ZI', 'ZW'),
+        struct('ZA', 'ZM'),
+        struct('MZ', 'MZ'),
+        struct('BC', 'BW'),
+        struct('WA', 'NA'),
+        struct('UP', 'UA'),
+        struct('PL', 'PL'),
+        struct('HU', 'HU'),
+        struct('RO', 'RO'),
+        struct('BK', 'BA'),
+        struct('HR', 'HR'),
+        struct('SI', 'SI'),
+        struct('GR', 'GR'),
+        struct('BU', 'BG'),
+        struct('EZ', 'CZ'),
+        struct('LO', 'SK'),
+        struct('EN', 'EE'),
+        struct('LG', 'LV'),
+        struct('LH', 'LT'),
+        struct('FI', 'FI'),
+        struct('SW', 'SE'),
+        struct('NO', 'NO'),
+        struct('DA', 'DK'),
+        struct('NL', 'NL'),
+        struct('BE', 'BE'),
+        struct('SZ', 'CH'),
+        struct('AU', 'AT'),
+        struct('VE', 'VE'),
+        struct('CO', 'CO'),
+        struct('AR', 'AR'),
+        struct('CI', 'CL'),
+        struct('PE', 'PE'),
+        struct('EC', 'EC'),
+        struct('BO', 'BO'),
+        struct('UY', 'UY'),
+        struct('CU', 'CU'),
+        struct('DR', 'DO'),
+        struct('HA', 'HT'),
+        struct('JM', 'JM'),
+        struct('TD', 'TH'),
+        struct('VM', 'VN'),
+        struct('MY', 'MY'),
+        struct('ID', 'ID'),
+        struct('RP', 'PH'),
+        struct('SN', 'SG'),
+        struct('NZ', 'NZ'),
+        struct('BD', 'BD'),
+        struct('CE', 'LK'),
+        struct('NP', 'NP'),
+        struct('BM', 'MM'),
+        struct('CB', 'KH'),
+        struct('LA', 'LA'),
+        struct('KZ', 'KZ'),
+        struct('UZ', 'UZ'),
+        struct('AJ', 'AZ'),
+        struct('GG', 'GE'),
+        struct('AM', 'AM'),
+        struct('MO', 'MN'),
+        struct('JO', 'JO'),
+        struct('LE', 'LB'),
+        struct('PA', 'PS'),
+        struct('KU', 'KW'),
+        struct('BA', 'BH'),
+        struct('QA', 'QA'),
+        struct('TC', 'AE'),
+        struct('YM', 'YE'),
+        struct('OM', 'OM')
+    ]) as t
+
+),
+
+ranked as (
+
+    select
+        b.*,
+        coalesce(f.iso, b.action_geo_country_code)          as iso_country_code,
+        row_number() over (order by event_count desc)       as country_rank
+    from by_country b
+    left join fips_to_iso f on b.action_geo_country_code = f.fips
+
+)
+
+select * from ranked
+    );
+  
+[0m10:58:31.177331 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=organic-phoenix-484620-p3&j=bq:US:abc72609-1970-4b97-8d59-a200d5c2c42e&page=queryresults
+[0m10:58:34.292033 [debug] [Thread-1 (]: SQL status: OK in 3.113 seconds
+[0m10:58:35.018676 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7abc961b-9a1c-4883-82ec-a4e225c82eb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e325160>]}
+[0m10:58:35.019596 [info ] [Thread-1 (]: 1 of 1 OK created sql table model gdelt_mart.mart_country_activity ............. [[32mCREATE TABLE (255.0 rows, 280.1 MiB processed)[0m in 7.03s]
+[0m10:58:35.020525 [debug] [Thread-1 (]: Finished running node model.gdelt_pipeline.mart_country_activity
+[0m10:58:35.022204 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:58:35.025092 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:58:35.025835 [debug] [MainThread]: Connection 'model.gdelt_pipeline.mart_country_activity' was properly closed.
+[0m10:58:35.026507 [debug] [MainThread]: Connection 'list_organic-phoenix-484620-p3_gdelt_staging' was properly closed.
+[0m10:58:35.027382 [info ] [MainThread]: 
+[0m10:58:35.028238 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 10.89 seconds (10.89s).
+[0m10:58:35.029668 [debug] [MainThread]: Command end result
+[0m10:58:35.080754 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/manifest.json
+[0m10:58:35.083974 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/semantic_manifest.json
+[0m10:58:35.192053 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/QUCOON/GITHUB/DE-ZOOMCAMP-CAP-PROJECT/dbt/target/run_results.json
+[0m10:58:35.192654 [info ] [MainThread]: 
+[0m10:58:35.193258 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:58:35.193768 [info ] [MainThread]: 
+[0m10:58:35.194718 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:58:35.195931 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 14.133121, "process_in_blocks": "0", "process_kernel_time": 0.842895, "process_mem_max_rss": "218923008", "process_out_blocks": "0", "process_user_time": 4.970626}
+[0m10:58:35.197325 [debug] [MainThread]: Command `dbt run` succeeded at 10:58:35.197071 after 14.13 seconds
+[0m10:58:35.198198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee4d4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b595b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bd77ad0>]}
+[0m10:58:35.199355 [debug] [MainThread]: Flushing usage events
+[0m10:58:37.523560 [debug] [MainThread]: An error was encountered while trying to flush usage events
