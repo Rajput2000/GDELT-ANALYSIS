@@ -73,7 +73,7 @@ This project solves that by building a fully automated pipeline that turns the r
 
 ## Dashboard
 
-The dashboard answers two questions visually:
+The dashboard answers questions visually:
 
 **Global Event Tone Over Time** *(temporal)*
 Daily average media tone and event volume over the last 30 days, broken down by quad class (Verbal Cooperation, Material Cooperation, Verbal Conflict, Material Conflict). Reveals whether global news is trending more positive or negative.
